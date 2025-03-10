@@ -1,0 +1,106 @@
+"use client";
+import { MainHeading, SectionWithContainer } from "@/components";
+import SliderSwip from "@/components/SliderSwip";
+import { OutLineBtnNext, OutLineBtnPrev } from "@/icons/icons";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+interface exploreOurMenu {
+  title: string;
+  cards: {
+    id: number;
+    category: string;
+    src: string;
+  }[];
+  buttons: {
+    label: string;
+    href: string;
+  }[];
+}
+const ExploreOurMenu: React.FC<exploreOurMenu> = ({
+  title,
+  cards,
+  buttons,
+}) => {
+  const categories = [...new Set(cards.map((card) => card.category))];
+  const [selectCategory, setSelectCategory] = useState(categories[0]);
+
+  const filteredCards = cards.filter(
+    (card) => card.category === selectCategory
+  );
+
+  return (
+    <SectionWithContainer sectionClassName="bg-gradient-to-b from-white to-secondary">
+      <div className="flex flex-col gap-6 items-center justify-center">
+        <MainHeading h2 title={title} className="text-center heading1" />
+        <div className="flex items-center justify-center gap-4">
+          {categories?.map((category, index) => (
+            <button
+              key={index}
+              className={`${selectCategory === category ? "bg-primary text-white" : "bg-secondary text-primary"} py-2 px-4 rounded-full font-medium transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100`}
+              onClick={() => setSelectCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        <div className="w-full relative commonSwiper">
+          <SliderSwip
+            data={filteredCards}
+            modules={[Autoplay, Pagination, Navigation]}
+            pagination={{ clickable: true, el: ".pagination_1" }}
+            // autoplay={{ delay: 2500, disableOnInteraction: false }}
+            navigation={{
+              nextEl: ".menu_next",
+              prevEl: ".menu_prev",
+              clickable: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+              },
+            }}
+          >
+            {(card) => (
+              <div className="w-full aspect-square relative">
+                <Image
+                  src={card.src}
+                  alt={title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
+          </SliderSwip>
+          <button className="menu_prev shadow-xl hidden absolute -left-6 top-1/2 -translate-y-1/2 filter backdrop:blur-md w-12 aspect-square rounded-full bg-white text-clr2 lg:flex items-center justify-center disabled:opacity-0 z-10">
+            <OutLineBtnPrev />
+          </button>
+          <button className="menu_next shadow-xl hidden absolute -right-6 top-1/2 -translate-y-1/2 filter backdrop:blur-md w-12 aspect-square rounded-full bg-white text-clr2 lg:flex items-center justify-center disabled:opacity-0 z-10">
+            <OutLineBtnNext />
+          </button>
+          <div className="pagination_1 flex items-center justify-center gap-1 mt-4"></div>
+        </div>
+        <div className="flex flex-col items-center gap-5 mt-4">
+          <Link
+            href={buttons[0].href}
+            className=" text-primary underline underline-offset-1 text-base capitalize py-3 px-6 description1 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"
+          >
+            {buttons[0].label}
+          </Link>
+          <button className="text-white bg-primary text-base capitalize py-3 px-6 description1 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
+            {buttons[1].label}
+          </button>
+        </div>
+      </div>
+    </SectionWithContainer>
+  );
+};
+
+export default ExploreOurMenu;
