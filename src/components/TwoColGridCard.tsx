@@ -39,12 +39,12 @@ const TwoColGridCard: React.FC<AboutUsDataProps> = ({
             />
           )}
           <div className="flex max-sm:flex-col-reverse items-center lg:gap-5  lg:mt-4">
-            <button className="text-white bg-primary avenir text-base capitalize py-3 px-6 description1 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
+            <Link href={buttons[0].href} className="text-white bg-primary text-base capitalize py-3 px-6 description2 avenir-book rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
               {buttons[0].label}
-            </button>
+            </Link>
             <Link
               href={buttons[1].href}
-              className=" text-primary underline underline-offset-1 avenir text-base capitalize py-3 px-6 description1 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"
+              className=" text-primary underline underline-offset-1 avenir-book text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"
             >
               {buttons[1].label}
             </Link>

@@ -37,16 +37,18 @@ const Banner: React.FC<BannerProps> = ({
               <Image src={src2} alt="alt" fill className={"object-contain"} />
             </div>
             <Paragraph
-              className={"mt-4 description1 avenir max-sm:text-center"}
+              className={
+                "mt-4 description1 avenir max-sm:text-center font-light"
+              }
               text={desc}
             />
             <div className="flex max-sm:flex-col-reverse items-center lg:gap-5 gap-4 mt-4">
-              <button className="text-white bg-primary avenir text-base capitalize py-3 px-6 description1 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
+              <Link href={buttons[0].href} className="text-white  bg-primary avenir-book text-base capitalize py-3 px-6 description2 rounded-full  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
                 {buttons[0].label}
-              </button>
+              </Link>
               <Link
                 href={buttons[1].href}
-                className=" text-primary underline underline-offset-1 avenir text-base capitalize py-3 px-6 description1 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"
+                className=" text-primary underline underline-offset-1 avenir-book text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"
               >
                 {buttons[1].label}
               </Link>
@@ -57,29 +59,27 @@ const Banner: React.FC<BannerProps> = ({
           <div className="relative w-full aspect-[4/2.3]">
             <Image src={src} alt="alt" fill className="object-cover " />
           </div>
-          {/* <div className="absolute bottom-0 left-0 w-full">
-            <div className="relative w-full aspect-[4/1]">
-              <Image
-                src={"/group.png"}
-                alt="alt"
-                fill
-                className={"object-contain"}
-              />
-            </div>
+          <div className="absolute top-0 left-0 rotate-90">
+            <Image
+              src={"/group.png"}
+              alt="alt"
+              width={100}
+              height={100}
+              className={"object-contain"}
+            />
           </div>
-          <div className="absolute top-0 left-0 w-[15rem] rotate-90">
-            <div className="relative w-full aspect-[4/1]">
-              <Image
-                src={"/group.png"}
-                alt="alt"
-                fill
-                className={"object-contain"}
-              />
-            </div>
-          </div> */}
+          <div className="absolute bottom-0 left-0 w-full">
+            <Image
+              src={"/group.png"}
+              alt="alt"
+              width={100}
+              height={100}
+              className={"object-contain"}
+            />
+          </div>
         </div>
       </div>
-      <div className="w-full absolute top-0 left-0 lg:h-[730px]  bg-secondary h-[1000px] lg:rounded-bl-[13rem] rounded-bl-[8rem]"></div>
+      <div className="w-full absolute top-0 left-0 lg:h-screen  bg-secondary h-[1000px] lg:rounded-bl-[13rem] rounded-bl-[8rem]"></div>
     </section>
   );
 };

@@ -110,7 +110,7 @@ const Gallery: React.FC<GalleryDataProps> = ({
         </div>
         <div className="pagination_3 flex items-center justify-center gap-1 w-full lg:hidden"></div>
 
-        <Button href={href} label={label} newTabe className="avenir" />
+        <Button href={href} label={label} newTabe className="avenir-book " />
       </div>
     </SectionWithContainer>
   );

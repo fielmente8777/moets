@@ -131,11 +131,11 @@ const Form = () => {
             value={formData.countryCode}
             onChange={handleChange}
             required
-            className="text-sm text-[#222] outline-none px-1 py-3 border-r border-[#C3C3C3] "
-            style={{ width: `${formData.countryCode.length + 8}ch` }}
+            className="text-sm text-[#222] outline-none px-[8px] py-3 "
+            style={{ width: `${formData.countryCode.length + 9}ch` }}
           >
             {countries.map((country, i) => (
-              <option key={i} value={country.code}>
+              <option key={i} value={country.code} className="text-sm">
                 {country.code} {country.name}
               </option>
             ))}
@@ -148,7 +148,7 @@ const Form = () => {
             onChange={handleChange}
             required
             maxLength={10}
-            className="w-full px-4 py-3 rounded-lg outline-none"
+            className="w-full px-4 py-3 outline-none border-l border-[#C3C3C3] "
           />
         </div>
         {errorMessage && <p className="text-red-500">{errorMessage}</p>}
@@ -180,7 +180,7 @@ const Form = () => {
       </div>
       <button
         type="submit"
-        className="bg-primary text-sm text-white px-5 py-3 font-normal capitalize hover:bg-primary/80 duration-500 rounded-lg border"
+        className="bg-primary text-sm text-white px-5 py-4 avenir font-normal capitalize hover:bg-primary/80 duration-500 rounded-lg border"
       >
         {formRes ? "Loading...." : "Submit"}
       </button>

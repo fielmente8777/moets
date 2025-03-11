@@ -38,8 +38,8 @@
   src: url(/fonts/AvenirLTStd-Book.otf) format("opentype");
 }
 @font-face {
-  font-family: "MendlSerifVF_Trial_WghtStyl";
-  src: url(/fonts/MendlSerifVF_Trial_WghtStyl.ttf) format("truetype");
+  font-family: "MendlSerif_Trial_DawnRg";
+  src: url(/fonts/MendlSerif_Trial_DawnRg.ttf) format("truetype");
 }
 
 .artifex {
@@ -62,13 +62,14 @@
   font-optical-sizing: auto;
 }
 
-.avenir {
+.avenir,
+input {
   font-family: "Avenir", sans-serif;
   font-optical-sizing: auto;
 }
 
 .avenir-book {
-  font-family: "AvenirLTStd-Book", serif;
+  font-family: "AvenirLTStd-Book", sans-serif;
   font-optical-sizing: auto;
 }
 
@@ -78,7 +79,7 @@
 }
 
 .mendl {
-  font-family: "MendlSerifVF_Trial_WghtStyl";
+  font-family: "MendlSerif_Trial_DawnRg";
   font-optical-sizing: auto;
 }
 
@@ -114,6 +115,10 @@
 ::-webkit-scrollbar-thumb {
   background-color: #5a150f;
   border-radius: 1rem;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @layer utilities {
@@ -279,3 +284,35 @@
     }
   }
 }
+
+.bg_image {
+  position: relative;
+}
+
+.bg_image::before,
+.bg_image::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 6.8rem;
+  width: 100%;
+  height: 1rem;
+  left: 0;
+}
+
+.bg_image::before {
+  background-image: url("/border.png");
+  bottom: -3rem;
+  @media (width < 780px) {
+    background: none;
+  }
+}
+
+.bg_image::after {
+  background-image: url("/border.png");
+  top: -2rem;
+  @media (width < 780px) {
+    background: none;
+  }
+}
+

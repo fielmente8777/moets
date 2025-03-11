@@ -32,10 +32,17 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
   );
 
   return (
-    <SectionWithContainer sectionClassName="bg-gradient-to-b from-white to-secondary" sectionId="menu">
+    <SectionWithContainer
+      sectionClassName="bg-gradient-to-b from-white to-secondary"
+      sectionId="menu"
+    >
       <div className="flex flex-col gap-6 lg:gap-10 items-center justify-center max-sm:overflow-hidden">
-        <MainHeading h2 title={title} className="text-center heading1 artifex" />
-        <div className="flex items-center justify-center gap-4 max-sm:overflow-auto mt-4">
+        <MainHeading
+          h2
+          title={title}
+          className="text-center heading1 artifex"
+        />
+        <div className="flex items-center justify-center gap-4 overflow-x-scroll w-full hide-scrollbar">
           {categories?.map((category, index) => (
             <button
               key={index}
@@ -91,16 +98,19 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
           </button>
           <div className="pagination_2 flex items-center justify-center gap-1 mt-4"></div>
         </div>
-        <div className="flex flex-col items-center lg:gap-5 lg:mt-4">
+        <div className="flex flex-col items-center lg:gap-2 lg:mt-4">
           <Link
             href={buttons[0].href}
-            className=" text-primary underline avenir underline-offset-1 text-base capitalize py-3 px-6 description1 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"
+            className=" text-primary underline avenir-book underline-offset-1 text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"
           >
             {buttons[0].label}
           </Link>
-          <button className="text-white bg-primary avenir text-base capitalize py-3 px-6 description1 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
+          <Link
+            href={buttons[1].href}
+            className="text-white bg-primary avenir-book text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100"
+          >
             {buttons[1].label}
-          </button>
+          </Link>
         </div>
       </div>
     </SectionWithContainer>

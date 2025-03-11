@@ -22,7 +22,7 @@ const TestimonialCard: React.FC<testimonialProps["cards"][0]> = ({
       <Paragraph className="description1 font-medium" text={desc} />
       <MainHeading
         h4
-        className="font-semibold lg:text-lg text-base montserrat text-[#363636]"
+        className="font-bold lg:text-lg text-base montserrat text-[#363636]"
         title={user}
       />
     </div>

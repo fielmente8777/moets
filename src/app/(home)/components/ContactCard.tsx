@@ -19,10 +19,10 @@ const ContactCard: React.FC<ContactCardProps> = ({
           <h3 className="capitalize text-white largeHeading mendl max-sm:text-center">
             {title}
           </h3>
-          <p className=" text-white heading1 avenir max-sm:text-center">{subTitle}</p>
+          <p className=" text-white description1 font-extralight avenir max-sm:text-center">{subTitle}</p>
         </div>
         <div className="lg:col-span-2 col-span-3 flex items-center justify-center lg:justify-end w-full h-full">
-          <Button href={href} label={label} className="border-white border avenir" />
+          <Button href={href} label={label} className="border-white border avenir-book" />
         </div>
       </div>
     </SectionWithContainer>

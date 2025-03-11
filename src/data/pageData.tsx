@@ -7,11 +7,11 @@ export const pageData = {
     src: imageUrl + "banner.webp",
     src2: imageUrl + "banner2.webp",
     desc: `In the 1960s, inspired by the success of Bahar-E-Kebab, a renowned ITC restaurant, Mr. P.P. Bindra decided to bring authentic barbecue to Delhi. His dream led to the creation of MOETS in Defence Colony, where age-old recipes and a team of skilled chefs set the foundation for a culinary icon. <br />
-<b>"We started with one mission: to bring people together over great food." — Mr. P.P. Bindra</b>`,
+<b class="font-bold mt-2">"We started with one mission: to bring people together over great food." — Mr. P.P. Bindra</b>`,
     buttons: [
       {
         label: "Call Us for Bookings",
-        href: "#contact-us",
+        href: "tel:+91 96677 52735",
       },
       {
         label: "Explore Menu",
@@ -27,7 +27,7 @@ export const pageData = {
     buttons: [
       {
         label: "Call Us for Bookings",
-        href: "#contact-us",
+        href: "tel:+91 96677 52735",
       },
       {
         label: "Explore Menu",
@@ -62,17 +62,17 @@ export const pageData = {
       },
       {
         id: 4,
-        category: "Bra Menu",
+        category: "Bar Menu",
         src: imageUrl + "im6.webp",
       },
       {
         id: 5,
-        category: "Bra Menu",
+        category: "Bar Menu",
         src: imageUrl + "im5.webp",
       },
       {
         id: 6,
-        category: "Bra Menu",
+        category: "Bar Menu",
         src: imageUrl + "im6.webp",
       },
       {
@@ -113,7 +113,7 @@ export const pageData = {
       },
       {
         label: "Call Us for Bookings",
-        href: "#contact-us",
+        href: "tel:+91 96677 52735",
       },
     ],
   },
@@ -173,13 +173,13 @@ export const pageData = {
     title: "Upcoming Events",
     subTitle: "UPCOMING EVENTS, PROMOTIONS AND OFFERS",
     label: "Call Us for enquiry",
-    href: "tel:0123456789",
+    href: "tel:+91 96677 52735",
   },
   contactNow: {
     title: "Contact US Now!",
     subTitle:
       "Reserve Your Table Today for an Unforgettable Dining Experience and Exceptional Service.",
     label: "Call Us for Bookings",
-    href: "tel:0123456789",
+    href: "tel:+91 96677 52735",
   },
 };
