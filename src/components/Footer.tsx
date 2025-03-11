@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="relative aspect-[4/3] w-[10rem]">
               <Image
                 src={"/logo.png"}
-                alt="yakumi"
+                alt="Moets"
                 fill
                 className="object-contain"
               />
@@ -83,7 +83,7 @@ const Footer = () => {
       <SectionWithContainer sectionClassName="bg-secondary border-t border-primary !py-4 text-dark">
         <div className="flex max-md:flex-col items-center lg:justify-between gap-4">
           <p className="text-center avenir">
-            © {currentYear} Yakumi. <br className="lg:hidden" />
+            © {currentYear} Moets. <br className="lg:hidden" />
             All Rights Reserved. <br className="lg:hidden" />
             Designed & Developed by{" "}
             <Link href="https://eazotel.com" className="font-bold">

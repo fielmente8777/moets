@@ -1,4 +1,10 @@
-import { MainHeading, SectionWithContainer, Section } from "@/components";
+import {
+  MainHeading,
+  SectionWithContainer,
+  Section,
+  Button,
+} from "@/components";
+import { BtnIcon1, HeaderLogo2 } from "@/icons/icons";
 import Image from "next/image";
 
 interface theNextChapter {
@@ -13,13 +19,20 @@ const NextChapter: React.FC<theNextChapter> = ({
   subtitle,
   desc,
   label,
-  //   href,
+    href,
 }) => {
   return (
-    <Section id="nextChapter" className="bg-secondary ">
+    <Section id="nextChapter" className="bg-secondary bg_image">
       <SectionWithContainer containerClassName="relative lg:p-4">
         <div className="flex flex-col lg:gap-6 gap-4 items-center justify-center">
-          <MainHeading h2 title={title} className="text-center artifex font-medium heading1" />
+          <div className="">
+            <HeaderLogo2 />
+            <MainHeading
+              h2
+              title={title}
+              className="text-center artifex font-medium heading1 tracking-wider"
+            />
+          </div>
           <MainHeading
             h3
             title={subtitle}
@@ -29,9 +42,17 @@ const NextChapter: React.FC<theNextChapter> = ({
             {desc}
           </p>
           <div className="flex items-center gap-5">
-            <button className="text-white bg-primary avenir-book text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
+            {/* <button className="text-white bg-primary avenir-book text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
               {label}
-            </button>
+            </button> */}
+            <div className="flex flex-col gap-2 items-center">
+              <Button
+                href={href}
+                label={label}
+                className="avenir-book "
+              />
+              <BtnIcon1 />
+            </div>
           </div>
         </div>
         <div className="absolute top-0 left-0 ">

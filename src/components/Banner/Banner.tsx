@@ -2,6 +2,7 @@
 import Paragraph from "../Paragraph/Paragraph";
 import Link from "next/link";
 import Image from "next/image";
+import { BtnIcon1 } from "@/icons/icons";
 
 interface BannerProps {
   title: string;
@@ -43,9 +44,15 @@ const Banner: React.FC<BannerProps> = ({
               text={desc}
             />
             <div className="flex max-sm:flex-col-reverse items-center lg:gap-5 gap-4 mt-4">
-              <Link href={buttons[0].href} className="text-white  bg-primary avenir-book text-base capitalize py-3 px-6 description2 rounded-full  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100">
-                {buttons[0].label}
-              </Link>
+              <div className="flex flex-col gap-2 items-center">
+                <Link
+                  href={buttons[0].href}
+                  className="text-white  bg-primary avenir-book text-base capitalize py-3 px-6 description2 rounded-full  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100"
+                >
+                  {buttons[0].label}
+                </Link>
+                <BtnIcon1 />
+              </div>
               <Link
                 href={buttons[1].href}
                 className=" text-primary underline underline-offset-1 avenir-book text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"

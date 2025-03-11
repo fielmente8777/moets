@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { OutLineBtnNext, OutLineBtnPrev } from "@/icons/icons";
+import { BtnIcon1, HeaderLogo, OutLineBtnNext, OutLineBtnPrev } from "@/icons/icons";
 const Gallery: React.FC<GalleryDataProps> = ({
   title,
   images,
@@ -30,15 +30,18 @@ const Gallery: React.FC<GalleryDataProps> = ({
   return (
     <SectionWithContainer
       sectionId="gallery"
-      sectionClassName="bg-gradient-to-b from-white to-secondary"
+      sectionClassName="bg-gradient-to-b from-white to-secondary bg_image"
     >
       <div className="flex flex-col items-center justify-center w-full lg:gap-14 gap-6 commonSwiper">
         <div className="w-full flex items-center justify-center flex-col gap-6">
-          <MainHeading
-            title={title}
-            h2
-            className="text-center heading1 artifex uppercase font-medium"
-          />
+          <div className="flex flex-col items-center">
+            <HeaderLogo />
+            <MainHeading
+              title={title}
+              h2
+              className="text-center heading1 artifex uppercase font-medium"
+            />
+          </div>
           <MainHeading
             title={subTitle}
             h3
@@ -109,8 +112,10 @@ const Gallery: React.FC<GalleryDataProps> = ({
           </button>
         </div>
         <div className="pagination_3 flex items-center justify-center gap-1 w-full lg:hidden"></div>
-
-        <Button href={href} label={label} newTabe className="avenir-book " />
+        <div className="flex flex-col gap-2 items-center">
+          <Button href={href} label={label} newTabe className="avenir-book " />
+          <BtnIcon1 />
+        </div>
       </div>
     </SectionWithContainer>
   );

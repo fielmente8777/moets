@@ -32,8 +32,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <Whatsapp whatsAppNumber="1234567890" />
-        <Call callNumber="1234567890" />
+        <Whatsapp whatsAppNumber="9667752735" />
+        <Call callNumber="91 96677 52735" />
       </body>
     </html>
   );

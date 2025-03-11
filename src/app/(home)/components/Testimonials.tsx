@@ -6,7 +6,7 @@ import {
   TestimonialCard,
 } from "@/components";
 import SliderSwip from "@/components/SliderSwip";
-import { OutLineBtnNext, OutLineBtnPrev } from "@/icons/icons";
+import { HeaderLogo3, OutLineBtnNext, OutLineBtnPrev } from "@/icons/icons";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const Testimonials: React.FC<testimonialProps> = ({
@@ -18,7 +18,14 @@ const Testimonials: React.FC<testimonialProps> = ({
     <SectionWithContainer sectionId="testimonials">
       <div className="flex flex-col lg:gap-10 gap-6">
         <div className="flex flex-col lg:gap-6 gap-2">
-          <MainHeading h2 title={title} className="text-center heading1 artifex font-medium" />
+          <div className="w-full flex flex-col items-center">
+            <HeaderLogo3 />
+            <MainHeading
+              h2
+              title={title}
+              className="text-center heading1 artifex font-medium tracking-wider"
+            />
+          </div>
           <MainHeading
             h3
             title={subTitle}
@@ -30,7 +37,7 @@ const Testimonials: React.FC<testimonialProps> = ({
             data={cards}
             modules={[Autoplay, Pagination, Navigation]}
             pagination={{ clickable: true, el: ".pagination" }}
-            autoplay={{ delay: 2500, disableOnInteraction: false }} 
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
             navigation={{
               nextEl: ".testimonials_next",
               prevEl: ".testimonials_prev",

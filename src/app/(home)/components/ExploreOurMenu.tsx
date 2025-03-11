@@ -1,7 +1,12 @@
 "use client";
 import { MainHeading, SectionWithContainer } from "@/components";
 import SliderSwip from "@/components/SliderSwip";
-import { OutLineBtnNext, OutLineBtnPrev } from "@/icons/icons";
+import {
+  BtnIcon1,
+  HeaderLogo2,
+  OutLineBtnNext,
+  OutLineBtnPrev,
+} from "@/icons/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -37,11 +42,14 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
       sectionId="menu"
     >
       <div className="flex flex-col gap-6 lg:gap-10 items-center justify-center max-sm:overflow-hidden">
-        <MainHeading
-          h2
-          title={title}
-          className="text-center heading1 artifex"
-        />
+        <div className="">
+          <HeaderLogo2 />
+          <MainHeading
+            h2
+            title={title}
+            className="text-center heading1 artifex tracking-wider"
+          />
+        </div>
         <div className="flex items-center justify-center gap-4 overflow-x-scroll w-full hide-scrollbar">
           {categories?.map((category, index) => (
             <button
@@ -105,12 +113,15 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
           >
             {buttons[0].label}
           </Link>
-          <Link
-            href={buttons[1].href}
-            className="text-white bg-primary avenir-book text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100"
-          >
-            {buttons[1].label}
-          </Link>
+          <div className="flex flex-col items-center gap-2">
+            <Link
+              href={buttons[1].href}
+              className="text-white bg-primary avenir-book text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100"
+            >
+              {buttons[1].label}
+            </Link>
+            <BtnIcon1 />
+          </div>
         </div>
       </div>
     </SectionWithContainer>

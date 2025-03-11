@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                 <li key={link.id} className="">
                   <Link
                     href={link.href}
-                    className={`${pathname === link.href ? "border-b border-primary" : ""} capitalize text-primary font-medium w-fit description1`}
+                    className={`${pathname === link.href ? "border-b border-primary" : ""} capitalize text-primary avenir-book w-fit description1 hover:border-b border-primary transition-all duration-300 ease-in-out`}
                   >
                     {link.label}
                   </Link>
