@@ -15,7 +15,7 @@ const Testimonials: React.FC<testimonialProps> = ({
   cards,
 }) => {
   return (
-    <SectionWithContainer sectionId="reviews">
+    <SectionWithContainer sectionId="testimonials">
       <div className="flex flex-col lg:gap-10 gap-6">
         <div className="flex flex-col lg:gap-6 gap-2">
           <MainHeading h2 title={title} className="text-center heading1 artifex font-medium" />

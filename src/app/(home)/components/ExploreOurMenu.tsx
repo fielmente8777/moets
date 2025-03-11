@@ -32,7 +32,7 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
   );
 
   return (
-    <SectionWithContainer sectionClassName="bg-gradient-to-b from-white to-secondary">
+    <SectionWithContainer sectionClassName="bg-gradient-to-b from-white to-secondary" sectionId="menu">
       <div className="flex flex-col gap-6 lg:gap-10 items-center justify-center max-sm:overflow-hidden">
         <MainHeading h2 title={title} className="text-center heading1 artifex" />
         <div className="flex items-center justify-center gap-4 max-sm:overflow-auto mt-4">

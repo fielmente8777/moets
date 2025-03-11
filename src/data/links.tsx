@@ -18,7 +18,7 @@ export const NavLink: navLinkProps[] = [
   {
     id: 3,
     label: "Menu",
-    href: "#features",
+    href: "#menu",
   },
   {
     id: 4,
@@ -28,7 +28,7 @@ export const NavLink: navLinkProps[] = [
   {
     id: 5,
     label: "gallery",
-    href: "#reviews",
+    href: "#gallery",
   },
 ];
 
@@ -67,7 +67,7 @@ export const FooterLink: footerLinkProps[] = [
       {
         id: 2,
         label: "Menu",
-        href: "#features",
+        href: "#menu",
       },
       {
         id: 3,
@@ -77,7 +77,7 @@ export const FooterLink: footerLinkProps[] = [
       {
         id: 4,
         label: "Gallery",
-        href: "#reviews",
+        href: "#gallery",
       },
     ],
   },
