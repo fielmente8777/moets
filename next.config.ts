@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true,
+    domains: ["eazotel-client-webp-image.s3.ap-south-1.amazonaws.com"],
   },
   trailingSlash: true,
 };

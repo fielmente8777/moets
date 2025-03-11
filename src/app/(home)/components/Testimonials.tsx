@@ -16,13 +16,13 @@ const Testimonials: React.FC<testimonialProps> = ({
 }) => {
   return (
     <SectionWithContainer sectionId="reviews">
-      <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-6">
-          <MainHeading h2 title={title} className="text-center heading1" />
+      <div className="flex flex-col lg:gap-10 gap-6">
+        <div className="flex flex-col lg:gap-6 gap-2">
+          <MainHeading h2 title={title} className="text-center heading1 artifex font-medium" />
           <MainHeading
             h3
             title={subTitle}
-            className="text-center largeHeading text-primary uppercase"
+            className="text-center lg:largeHeading text-3xl text-primary uppercase mendl"
           />
         </div>
         <div className="w-full relative commonSwiper">
@@ -30,7 +30,7 @@ const Testimonials: React.FC<testimonialProps> = ({
             data={cards}
             modules={[Autoplay, Pagination, Navigation]}
             pagination={{ clickable: true, el: ".pagination" }}
-            // autoplay={{ delay: 2500, disableOnInteraction: false }}
+            autoplay={{ delay: 2500, disableOnInteraction: false }} 
             navigation={{
               nextEl: ".testimonials_next",
               prevEl: ".testimonials_prev",

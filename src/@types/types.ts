@@ -23,6 +23,8 @@ export interface footerLinkProps {
     title?: string;
     label: string;
     href: string;
+    label2?: string;
+    href2?: string;
   }[];
 }
 
@@ -30,38 +32,18 @@ export interface AboutUsDataProps {
   title: string;
   subtitle: string;
   desc: string;
-  images: string[];
+  image: string;
   buttons: {
     label: string;
     href: string;
   }[];
 }
 
-export interface FeaturesDataProps {
+export interface upcomingEventsProps {
   title: string;
-  desc: string;
-  cards: {
-    id: number;
-    title: string;
-    subtitle: string;
-    icon: JSX.Element;
-  }[];
-}
-
-export interface FeatureCardProps {
-  title: string;
-  subtitle: string;
-  icon: JSX.Element;
-}
-
-export interface OurFeaturesDataProps {
-  title: string;
-  desc: string;
-  images: {
-    id: number;
-    src: string;
-    title: string;
-  }[];
+  subTitle: string;
+  label: string;
+  href: string;
 }
 
 export interface GalleryDataProps {

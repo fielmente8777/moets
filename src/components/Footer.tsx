@@ -1,5 +1,5 @@
 "use client";
-import { FooterLink, imageUrl, SocialLink } from "@/data/links";
+import { FooterLink, SocialLink } from "@/data/links";
 import SectionWithContainer from "./SectionComponents/SectionWithContainer";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,20 +11,20 @@ const Footer = () => {
   return (
     <footer className="max-screen w-full bg-secondary">
       <SectionWithContainer sectionClassName="">
-        <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 lg:gap-28">
-          <div className="w-full">
+        <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 lg:gap-20">
+          <div className="w-full flex flex-col lg:gap-4 gap-2 max-sm:items-center">
             <div className="relative aspect-[4/3] w-[10rem]">
               <Image
-                src={imageUrl + "logo.webp"}
+                src={"/logo.png"}
                 alt="yakumi"
                 fill
                 className="object-contain"
               />
             </div>
-            <p className="mt-4">
+            <p className=" avenir text-dark description1">
               Traditional Indian cuisine, crafted to perfection
             </p>
-            <ul className="flex items-center gap-4 mt-4">
+            <ul className="flex items-center max-sm:justify-center w-full gap-4 mt-4">
               {SocialLink.map((link, i) => (
                 <li key={i}>
                   <Link
@@ -42,7 +42,9 @@ const Footer = () => {
           </div>
           {FooterLink.map((link, i) => (
             <div key={i} className="w-full flex flex-col gap-3">
-              <h4 className="heading1 uppercase text-primary">{link.title}</h4>
+              <h2 className="heading1 uppercase text-primary mendl">
+                {link.title}
+              </h2>
               <ul className="flex flex-col gap-2">
                 {link.id === 3 ? (
                   <>
@@ -56,9 +58,19 @@ const Footer = () => {
                   <>
                     {link.links.map((item, i) => (
                       <li key={i}>
-                        <Link href={item.href} className="description2">
+                        <Link href={item.href} className="description2 avenir">
                           {item.label}
                         </Link>
+                        {item.href2 && <>,{" "}</>}
+
+                        {item.href2 && (
+                          <Link
+                            href={item.href2}
+                            className="description2 avenir"
+                          >
+                            {item.label2}
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </>
@@ -70,7 +82,7 @@ const Footer = () => {
       </SectionWithContainer>
       <SectionWithContainer sectionClassName="bg-secondary border-t border-primary !py-4 text-dark">
         <div className="flex max-md:flex-col items-center lg:justify-between gap-4">
-          <p className="text-center">
+          <p className="text-center avenir">
             © {currentYear} Yakumi. <br className="lg:hidden" />
             All Rights Reserved. <br className="lg:hidden" />
             Designed & Developed by{" "}

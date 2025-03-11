@@ -109,7 +109,7 @@ const Form = () => {
         <MainHeading
           h2
           title="Fill in details to book a private party!"
-          className="description1 font_go font-semibold text-primary"
+          className="description1  uppercase text-primary mendl"
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -118,7 +118,7 @@ const Form = () => {
             id="Name"
             type="text"
             name="userName"
-            placeholder="Full Name*"
+            placeholder="Your full name*"
             value={formData.userName}
             onChange={handleChange}
             required
@@ -131,19 +131,19 @@ const Form = () => {
             value={formData.countryCode}
             onChange={handleChange}
             required
-            className="text-sm text-[#222] outline-none px-1 py-3 rounded-lg"
-            style={{ width: `${formData.countryCode.length + 5}ch` }}
+            className="text-sm text-[#222] outline-none px-1 py-3 border-r border-[#C3C3C3] "
+            style={{ width: `${formData.countryCode.length + 8}ch` }}
           >
             {countries.map((country, i) => (
               <option key={i} value={country.code}>
-                {country.code}
+                {country.code} {country.name}
               </option>
             ))}
           </select>
           <input
             type="text"
             name="userPhone"
-            placeholder="Phone Number*"
+            placeholder="Mobile number*"
             value={formData.userPhone}
             onChange={handleChange}
             required
@@ -156,7 +156,7 @@ const Form = () => {
           <input
             type="text"
             name="userEmail"
-            placeholder="Email Address"
+            placeholder="Email ID*"
             value={formData.userEmail}
             onChange={handleChange}
             required

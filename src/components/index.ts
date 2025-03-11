@@ -13,7 +13,7 @@ import Paragraph from "./Paragraph/Paragraph";
 import PopupForm from "./PopupForm";
 import Call from "./ContactButton/Call";
 import Whatsapp from "./ContactButton/WhatsApp";
-import { FeatureCard, TestimonialCard } from "./cards";
+import { TestimonialCard } from "./cards";
 export {
   Container,
   Section,
@@ -26,7 +26,6 @@ export {
   Button,
   Banner,
   MainHeading,
-  FeatureCard,
   Paragraph,
   PopupForm,
   Call,

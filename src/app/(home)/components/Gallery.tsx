@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { OutLineBtnNext, OutLineBtnPrev } from "@/icons/icons";
 const Gallery: React.FC<GalleryDataProps> = ({
   title,
   images,
@@ -21,9 +22,9 @@ const Gallery: React.FC<GalleryDataProps> = ({
     "col-span-2 row-span-2",
     "col-span-2 row-span-1",
     "col-span-2 row-span-2",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
     "col-span-2 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
   ];
 
   return (
@@ -31,18 +32,20 @@ const Gallery: React.FC<GalleryDataProps> = ({
       sectionId="gallery"
       sectionClassName="bg-gradient-to-b from-white to-secondary"
     >
-      <div className="flex flex-col items-center justify-center w-full lg:gap-14 gap-7 our_features_swiper">
-        <MainHeading
-          title={title}
-          h2
-          className="text-center heading1  uppercase "
-        />
-        <MainHeading
-          title={subTitle}
-          h3
-          className="text-primary text-center largeHeading font_go uppercase letter_spacing font-semibold"
-        />
-        <div className="lg:grid grid-cols-4 gap-6 auto-rows-[15rem] grid-flow-row w-full">
+      <div className="flex flex-col items-center justify-center w-full lg:gap-14 gap-6 commonSwiper">
+        <div className="w-full flex items-center justify-center flex-col gap-6">
+          <MainHeading
+            title={title}
+            h2
+            className="text-center heading1 artifex uppercase font-medium"
+          />
+          <MainHeading
+            title={subTitle}
+            h3
+            className="text-primary text-center largeHeading mendl uppercase"
+          />
+        </div>
+        <div className="lg:grid hidden grid-cols-4 gap-6 auto-rows-[15rem] grid-flow-row w-full">
           {images.map((image, index) => (
             <div
               key={index}
@@ -52,18 +55,23 @@ const Gallery: React.FC<GalleryDataProps> = ({
                 src={image}
                 alt={title + index}
                 fill
-                className="object-cover"
+                priority
+                loading="eager"
+                className={`object-cover ${index === 5 ? "object-top" : ""}`}
               />
             </div>
           ))}
         </div>
-        <div className="w-full lg:hidden">
+        <div className="w-full lg:hidden relative ">
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
             modules={[Pagination, Navigation]}
-            navigation
-            pagination={{ clickable: true, el: ".pagination_1" }}
+            navigation={{
+              nextEl: ".gallery_next",
+              prevEl: ".gallery_prev",
+            }}
+            pagination={{ clickable: true, el: ".pagination_3" }}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -93,10 +101,16 @@ const Gallery: React.FC<GalleryDataProps> = ({
               </SwiperSlide>
             ))}
           </Swiper>
+          <button className="gallery_prev shadow-xl absolute -left-3 top-1/2 -translate-y-1/2 filter backdrop:blur-md w-12 aspect-square rounded-full bg-white text-clr2 flex items-center justify-center disabled:opacity-0 z-10">
+            <OutLineBtnPrev />
+          </button>
+          <button className="gallery_next shadow-xl absolute -right-3 top-1/2 -translate-y-1/2 filter backdrop:blur-md w-12 aspect-square rounded-full bg-white text-clr2 flex items-center justify-center disabled:opacity-0 z-10">
+            <OutLineBtnNext />
+          </button>
         </div>
-        <div className="pagination_1 flex items-center justify-center gap-1 w-full"></div>
+        <div className="pagination_3 flex items-center justify-center gap-1 w-full lg:hidden"></div>
 
-        <Button href={href} label={label} newTabe className="" />
+        <Button href={href} label={label} newTabe className="avenir" />
       </div>
     </SectionWithContainer>
   );

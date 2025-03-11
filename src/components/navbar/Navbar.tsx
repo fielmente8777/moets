@@ -3,36 +3,36 @@ import Link from "next/link";
 import Container from "../SectionComponents/Container";
 import { NavLink, SocialLink } from "@/data/links";
 import Image from "next/image";
-import { IoMdClose } from "react-icons/io";
-import { useEffect, useState } from "react";
+// import { IoMdClose } from "react-icons/io";
+// import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import MobileNav from "./MobileNav";
-import { MenuBurger, Outlinecall } from "@/icons/icons";
+// import MobileNav from "./MobileNav";
+// import { MenuBurger, Outlinecall } from "@/icons/icons";
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [isOpen]);
 
   return (
     <header className="relative z-10">
       <Container>
         <nav className="flex items-center justify-between">
-          <button
+          {/* <button
             className={`text-4xl lg:hidden ${isOpen ? "rotate-90" : ""} transition-all duration-300 ease-in-out`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <IoMdClose /> : <MenuBurger />}
-          </button>
+          </button> */}
           <div className="">
             <Link
               href="#"
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
           <div className="lg:flex hidden items-center gap-12">
-            <ul className="lg:flex hidden items-center gap-12">
+            <ul className="flex items-center gap-12">
               {NavLink.slice(1, NavLink.length).map((link) => (
                 <li key={link.id} className="">
                   <Link
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <div className="lg:flex hidden items-center">
+            <div className="flex items-center">
               <ul className="flex items-center gap-6">
                 {SocialLink.map((link) => (
                   <li key={link.id} className="">
@@ -78,15 +78,32 @@ const Navbar: React.FC = () => {
               </ul>
             </div>
           </div>
-          <div className="lg:hidden block">
+          <div className="flex lg:hidden items-center">
+            <ul className="flex items-center gap-6">
+              {SocialLink.map((link) => (
+                <li key={link.id} className="">
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white bg-primary border-2 border-primary w-10 aspect-square rounded-[4px] flex justify-center items-center hover:bg-white hover:text-primary transition-colors duration-300 ease-in-out"
+                  >
+                    <span className="sr-only">{link.label}</span>
+                    {link.icon}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* <div className="lg:hidden block">
             <Link href="tel:911234567890">
               <span className="sr-only">call</span>
               <Outlinecall />
             </Link>
-          </div>
+          </div> */}
         </nav>
       </Container>
-      <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
+      {/* <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} /> */}
     </header>
   );
 };

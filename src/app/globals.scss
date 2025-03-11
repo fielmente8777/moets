@@ -2,27 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-// @use "tailwindcss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-
-@font-face {
-  font-family: "go3v2";
-  src: url(/fonts/go3v2.ttf) format("truetype");
-}
-
-.font_go {
-  font-family: "go3v2", sans-serif;
+.montserrat {
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
 }
+
+@font-face {
+  font-family: "ArtifexCFBold", serif;
+  src: url(/fonts/ArtifexCFBold.otf) format("opentype");
+}
+@font-face {
+  font-family: "ArtifexCFBook", serif;
+  src: url(/fonts/ArtifexCFBook.otf) format("opentype");
+}
+@font-face {
+  font-family: "ArtifexCFDemiBold", serif;
+  src: url(/fonts/ArtifexCF-DemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "ArtifexCFHeavy", serif;
+  src: url(/fonts/ArtifexCFHeavy.otf) format("opentype");
+}
+@font-face {
+  font-family: "ArtifexCFRegular", serif;
+  src: url(/fonts/ArtifexCFRegular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Avenir", sans-serif;
+  src: url(/fonts/Avenir.ttf) format("truetype");
+}
+@font-face {
+  font-family: "AvenirLTStd-Book", serif;
+  src: url(/fonts/AvenirLTStd-Book.otf) format("opentype");
+}
+@font-face {
+  font-family: "MendlSerifVF_Trial_WghtStyl";
+  src: url(/fonts/MendlSerifVF_Trial_WghtStyl.ttf) format("truetype");
+}
+
+.artifex {
+  font-family: "ArtifexCFRegular", serif;
+  font-optical-sizing: auto;
+}
+
+.artifex-bold {
+  font-family: "ArtifexCFBold", serif;
+  font-optical-sizing: auto;
+}
+
+.artifex-demi-bold {
+  font-family: "ArtifexCFDemiBold", serif;
+  font-optical-sizing: auto;
+}
+
+.artifex-heavy {
+  font-family: "ArtifexCFHeavy", serif;
+  font-optical-sizing: auto;
+}
+
+.avenir {
+  font-family: "Avenir", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.avenir-book {
+  font-family: "AvenirLTStd-Book", serif;
+  font-optical-sizing: auto;
+}
+
+.artifex-book {
+  font-family: "ArtifexCFBook", serif;
+  font-optical-sizing: auto;
+}
+
+.mendl {
+  font-family: "MendlSerifVF_Trial_WghtStyl";
+  font-optical-sizing: auto;
+}
+
 .nunito {
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
-}
-
-:root {
-  --font-body: nunito;
-  --font-heading: font_go;
 }
 
 * {
@@ -37,30 +99,26 @@
   width: 0.48rem;
 }
 ::-webkit-scrollbar-button {
-  background-color: #1f1f1f;
+  background-color: #5a150f;
   border-radius: 0.7rem;
-  border: 1px solid #ffefe3;
+  border: 1px solid #5a150f;
 }
 ::-webkit-scrollbar-corner {
   border-radius: 50%;
 }
 ::-webkit-scrollbar-track {
-  background-color: #c72c27be;
+  background-color: #d1867f;
   margin-block: 0.1rem;
   border-radius: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #1f1f1f;
+  background-color: #5a150f;
   border-radius: 1rem;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-  .font_go {
-    font-family: "font_go Regular" sans-serif;
-    font-optical-sizing: auto;
   }
 
   // .letter_spacing {
@@ -160,7 +218,8 @@
   .pagination,
   .pagination_1,
   .pagination_2,
-  .pagination_3 {
+  .pagination_3,
+  .pagination_4 {
     // display: flex;
     // align-items: center;
     // justify-content: center;
@@ -169,7 +228,7 @@
     .swiper-pagination-bullet {
       width: 0.5rem;
       height: 0.5rem;
-      background-color: rgba(83, 78, 77, 0.60); // Light blue color
+      background-color: rgba(83, 78, 77, 0.6); // Light blue color
       border-radius: 50%;
       opacity: 1;
       transition: all 0.3s ease-in-out;
@@ -179,7 +238,7 @@
       width: 2rem;
       background-color: #534e4d;
       position: relative;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
     }
   }
 
@@ -220,5 +279,3 @@
     }
   }
 }
-
-

@@ -6,7 +6,7 @@ const About: React.FC<AboutUsDataProps> = ({
   title,
   subtitle,
   desc,
-  images,
+  image,
   buttons
 }) => {
   return (
@@ -15,7 +15,7 @@ const About: React.FC<AboutUsDataProps> = ({
         title={title}
         subtitle={subtitle}
         desc={desc}
-        images={images}
+        image={image}
         buttons={buttons}
       />
     </SectionWithContainer>

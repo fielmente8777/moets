@@ -4,9 +4,10 @@ export const pageData = {
   bannerData: {
     title: "THE MOETS LEGACY LIVES ON",
     subTitle: "From Tandoors to Timeless Taste:",
-    src: imageUrl + "img1.webp",
-    desc: `In the 1960s, inspired by the success of Bahar-E-Kebab, a renowned ITC restaurant, Mr. P.P. Bindra decided to bring authentic barbecue to Delhi. His dream led to the creation of MOETS in Defence Colony, where age-old recipes and a team of skilled chefs set the foundation for a culinary icon. 
-"We started with one mission: to bring people together over great food." — Mr. P.P. Bindra `,
+    src: imageUrl + "banner.webp",
+    src2: imageUrl + "banner2.webp",
+    desc: `In the 1960s, inspired by the success of Bahar-E-Kebab, a renowned ITC restaurant, Mr. P.P. Bindra decided to bring authentic barbecue to Delhi. His dream led to the creation of MOETS in Defence Colony, where age-old recipes and a team of skilled chefs set the foundation for a culinary icon. <br />
+<b>"We started with one mission: to bring people together over great food." — Mr. P.P. Bindra</b>`,
     buttons: [
       {
         label: "Call Us for Bookings",
@@ -22,7 +23,7 @@ export const pageData = {
     title: "About Moets",
     subtitle: "THE MAGIC IN EVERY BITE",
     desc: "MOETS carries the legacy of its authentic Indian tandoor and curry dishes, crafted from recipes passed down through generations. The exceptional skill of the original chefs and their dedication to perfection remain the backbone of MOETS to this day.",
-    images: [""],
+    image:"/about.png",
     buttons: [
       {
         label: "Call Us for Bookings",
@@ -47,62 +48,62 @@ export const pageData = {
       {
         id: 1,
         category: "Food Menu",
-        src: "",
+        src: imageUrl + "im5.webp",
       },
       {
         id: 2,
         category: "Food Menu",
-        src: "",
+        src: imageUrl + "im6.webp",
       },
       {
         id: 3,
         category: "Food Menu",
-        src: "",
+        src: imageUrl + "im5.webp",
       },
       {
         id: 4,
         category: "Bra Menu",
-        src: "",
+        src: imageUrl + "im6.webp",
       },
       {
         id: 5,
         category: "Bra Menu",
-        src: "",
+        src: imageUrl + "im5.webp",
       },
       {
         id: 6,
         category: "Bra Menu",
-        src: "",
+        src: imageUrl + "im6.webp",
       },
       {
         id: 7,
         category: "Kitty Party Menu",
-        src: "",
+        src: imageUrl + "im5.webp",
       },
       {
         id: 8,
         category: "Kitty Party Menu",
-        src: "",
+        src: imageUrl + "im6.webp",
       },
       {
         id: 9,
         category: "Kitty Party Menu",
-        src: "",
+        src: imageUrl + "im5.webp",
       },
       {
         id: 10,
         category: "Party Package Menu",
-        src: "",
+        src: imageUrl + "im6.webp",
       },
       {
         id: 11,
         category: "Party Package Menu",
-        src: "",
+        src: imageUrl + "im5.webp",
       },
       {
         id: 12,
         category: "Party Package Menu",
-        src: "",
+        src: imageUrl + "im6.webp",
       },
     ],
     buttons: [
@@ -120,17 +121,17 @@ export const pageData = {
     title: "Our Gallery",
     subTitle: "STUNNING AMBIENCE, EXCEPTIONAL CUISINE",
     images: [
-      imageUrl + "img6.webp",
-      imageUrl + "img7.webp",
-      imageUrl + "img8.webp",
-      imageUrl + "img6.webp",
-      imageUrl + "img7.webp",
-      imageUrl + "img8.webp",
-      imageUrl + "img6.webp",
-      imageUrl + "img7.webp",
+      imageUrl + "im7.webp",
+      imageUrl + "im8.webp",
+      imageUrl + "im9.webp",
+      imageUrl + "im10.webp",
+      imageUrl + "im11.webp",
+      imageUrl + "im12.webp",
+      imageUrl + "im13.webp",
+      imageUrl + "im14.webp",
     ],
     label: "Visit instagram",
-    href: "",
+    href: "https://www.instagram.com/moets.official/",
   },
   Testimonials: {
     title: "Testimonials",

@@ -5,8 +5,8 @@ import LazyLoadedMap from "@/components/map/LazyLoadedMap";
 const ContactUs = () => {
   return (
     <SectionWithContainer>
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
-        <div className="w-full rounded-2xl border border-primary overflow-hidden">
+      <div className="md:grid grid-cols-2 flex flex-col-reverse gap-6">
+        <div className="w-full rounded-2xl border border-primary overflow-hidden max-sm:aspect-square">
           <LazyLoadedMap src="" />
         </div>
         <div

@@ -1,12 +1,8 @@
 import { footerLinkProps, navLinkProps, socialLinkProps } from "@/@types/types";
-import {
-  FillFacebook,
-  FillInstagram,
-  FillTwitter,
-} from "@/icons/icons";
+import { FillFacebook, FillInstagram, FillTwitter } from "@/icons/icons";
 
 export const imageUrl =
-  "https://eazotel-client-webp-image.s3.ap-south-1.amazonaws.com/yakumi/";
+  "https://eazotel-client-webp-image.s3.ap-south-1.amazonaws.com/moets/";
 
 export const NavLink: navLinkProps[] = [
   {
@@ -41,20 +37,20 @@ export const SocialLink: socialLinkProps[] = [
     id: 1,
     label: "instagram",
     icon: <FillInstagram />,
-    href: "https://www.instagram.com/burgergullykolkata/?hl=en",
+    href: "https://www.instagram.com/moets.official/",
   },
   {
     id: 2,
     label: "twitter",
     icon: <FillTwitter />,
-    href: "",
+    href: "#",
   },
   {
     id: 3,
 
     label: "facebook",
     icon: <FillFacebook />,
-    href: "https://www.facebook.com/people/Burger-Gully-Kolkata/61559753117983/#",
+    href: "https://www.facebook.com/moets.official/?locale=en_GB",
   },
 ];
 
@@ -97,13 +93,16 @@ export const FooterLink: footerLinkProps[] = [
         href: "https://maps.app.goo.gl/9di9cekSU5ygmrhc6",
       },
       {
-        id: 3,
-        title: "call",
-        label: "+91 93559 31110",
-        href: "tel:+91 93559 31110",
-      },
-      {
         id: 2,
+        title: "call",
+        label: "+91 96677 52735",
+        href: "tel:+91 96677 52735",
+        label2: "+91 12448 91938",
+        href2: "tel:+91 12448 91938",
+      },
+      
+      {
+        id: 3,
         title: "email",
         label: "operations.elanmall@moets.com",
         href: "mailto:operations.elanmall@moets.com",
