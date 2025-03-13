@@ -93,7 +93,7 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
                   src={card.src}
                   alt={title}
                   fill
-                  className="object-cover"
+                  className="object-fill"
                 />
               </div>
             )}
