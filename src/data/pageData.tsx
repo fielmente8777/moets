@@ -4,7 +4,7 @@ export const pageData = {
   bannerData: {
     title: "THE MOETS LEGACY LIVES ON",
     subTitle: "From Tandoors to Timeless Taste:",
-    src: imageUrl + "banner.webp",
+    src: imageUrl + "im18.webp",
     src2: imageUrl + "banner2.webp",
     desc: `In the 1960s, inspired by the success of Bahar-E-Kebab, a renowned ITC restaurant, Mr. P.P. Bindra decided to bring authentic barbecue to Delhi. His dream led to the creation of MOETS in Defence Colony, where age-old recipes and a team of skilled chefs set the foundation for a culinary icon. <br />
 <b class="font-bold mt-2">"We started with one mission: to bring people together over great food." — Mr. P.P. Bindra</b>`,
@@ -15,7 +15,7 @@ export const pageData = {
       },
       {
         label: "Explore Menu",
-        href: "#",
+        href: "#menu",
       },
     ],
   },
@@ -23,7 +23,7 @@ export const pageData = {
     title: "About Moets",
     subtitle: "THE MAGIC IN EVERY BITE",
     desc: "MOETS carries the legacy of its authentic Indian tandoor and curry dishes, crafted from recipes passed down through generations. The exceptional skill of the original chefs and their dedication to perfection remain the backbone of MOETS to this day.",
-    image:"/about.png",
+    image:imageUrl + "im19.webp",
     buttons: [
       {
         label: "Call Us for Bookings",
@@ -31,7 +31,7 @@ export const pageData = {
       },
       {
         label: "Explore Menu",
-        href: "#",
+        href: "#menu",
       },
     ],
   },
@@ -62,18 +62,18 @@ export const pageData = {
       },
       {
         id: 4,
-        category: "Bar Menu",
-        src: imageUrl + "im6.webp",
+        category: "beverage menu",
+        src: imageUrl + "menu1.webp",
       },
       {
         id: 5,
-        category: "Bar Menu",
-        src: imageUrl + "im5.webp",
+        category: "beverage menu",
+        src: imageUrl + "menu2.webp",
       },
       {
         id: 6,
-        category: "Bar Menu",
-        src: imageUrl + "im6.webp",
+        category: "beverage menu",
+        src: imageUrl + "menu3.webp",
       },
       {
         id: 7,
@@ -105,11 +105,16 @@ export const pageData = {
         category: "Party Package Menu",
         src: imageUrl + "im6.webp",
       },
+      {
+        id: 13,
+        category: "beverage menu",
+        src: imageUrl + "menu4.webp",
+      },
     ],
     buttons: [
       {
         label: "Download Menu",
-        href: "#",
+        href: "https://drive.google.com/file/d/1nekIkCCWj0JKNe4EitvPY931GX4wh_Xy/view?usp=sharing",
       },
       {
         label: "Call Us for Bookings",
@@ -129,9 +134,13 @@ export const pageData = {
       imageUrl + "im12.webp",
       imageUrl + "im13.webp",
       imageUrl + "im14.webp",
+      imageUrl + "im15.webp",
+      imageUrl + "im20.webp",
+      imageUrl + "im17.webp",
+      imageUrl + "im16.webp",
     ],
     label: "Visit instagram",
-    href: "https://www.instagram.com/moets.official/",
+    href: "https://www.instagram.com/moets.elan_epic?igsh=anE5Z3Nrdjl6a2g2&utm_source=qr",
   },
   Testimonials: {
     title: "Testimonials",

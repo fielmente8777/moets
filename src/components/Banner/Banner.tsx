@@ -24,11 +24,11 @@ const Banner: React.FC<BannerProps> = ({
   src2,
 }) => {
   return (
-    <section className="max-w-[1600px] mx-auto w-full text-primary lg:mb-10 py-10 ">
+    <section className="max-w-[1600px] mx-auto w-full text-primary lg:mb-10 pb-10 ">
       <div className="grid lg:grid-cols-7 items-center gap-5 justify-center grid-cols-1 relative z-10">
         <div className="w-full lg:col-span-3 max-md:pt-4">
-          <div className="flex flex-col gap-4 w-full ml-auto max-w-lg max-sm:px-4">
-            <h1 className="heading1 artifex uppercase font-medium max-sm:text-center">
+          <div className="flex flex-col lg:gap-4 gap-1 w-full ml-auto max-w-lg max-sm:px-4">
+            <h1 className="heading1 artifex capitalize font-medium max-sm:text-center">
               {subTitle}
             </h1>
             <h2 className="largeHeading uppercase mendl font-bold max-sm:text-center">
@@ -43,7 +43,7 @@ const Banner: React.FC<BannerProps> = ({
               }
               text={desc}
             />
-            <div className="flex max-sm:flex-col-reverse items-center lg:gap-5 gap-4 mt-4">
+            <div className="flex max-sm:flex-col-reverse max-sm:items-center lg:gap-5 gap-4 mt-4">
               <div className="flex flex-col gap-2 items-center">
                 <Link
                   href={buttons[0].href}
@@ -86,7 +86,7 @@ const Banner: React.FC<BannerProps> = ({
           </div>
         </div>
       </div>
-      <div className="w-full absolute top-0 left-0 lg:h-screen  bg-secondary h-[1000px] lg:rounded-bl-[13rem] rounded-bl-[8rem]"></div>
+      <div className="w-full absolute top-0 left-0 lg:h-screen  bg-secondary h-[930px] lg:rounded-bl-[13rem] rounded-bl-[8rem]"></div>
     </section>
   );
 };

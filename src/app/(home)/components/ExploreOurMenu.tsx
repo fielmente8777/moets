@@ -54,7 +54,7 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
           {categories?.map((category, index) => (
             <button
               key={index}
-              className={`${selectCategory === category ? "bg-primary text-white" : "bg-[#F5F5F5] text-primary border border-[#C29355]"} text-nowrap avenir py-2 px-4 rounded-lg font-medium transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100`}
+              className={`${selectCategory === category ? "bg-primary text-white" : "bg-[#F5F5F5] text-primary border border-[#C29355]"} text-nowrap avenir capitalize py-2 px-4 rounded-lg font-medium transition-all duration-300 ease-in-out hover:scale-[1.01] active:scale-100`}
               onClick={() => setSelectCategory(category)}
             >
               {category}
@@ -109,6 +109,9 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
         <div className="flex flex-col items-center lg:gap-2 lg:mt-4">
           <Link
             href={buttons[0].href}
+            target="_blank"
+            rel="noopener noreferrer"
+            download={buttons[0].label}
             className=" text-primary underline avenir-book underline-offset-1 text-base capitalize py-3 px-6 description2 rounded-full font-medium  transition-all duration-300 ease-in-out active:scale-100"
           >
             {buttons[0].label}

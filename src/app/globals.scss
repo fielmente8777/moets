@@ -174,7 +174,7 @@ input {
     font-size: 3rem;
     line-height: 3.375rem;
     @media screen and (max-width: 640px) {
-      font-size: 2rem;
+      font-size: 1.5rem;
       line-height: 2.5rem;
     }
   }
@@ -190,7 +190,7 @@ input {
     font-size: 1.5rem;
     line-height: 1.75rem;
     @media screen and (max-width: 640px) {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       line-height: 1.5rem;
     }
   }
@@ -303,16 +303,9 @@ input {
 .bg_image::before {
   background-image: url("/border.svg");
   bottom: 0;
-  @media screen and (max-width: 780px) {
-    background: none;
-  }
 }
 
 .bg_image::after {
   background-image: url("/border.svg");
   top: 0;
-  @media (width < 780px) {
-    background: none;
-  }
 }
-

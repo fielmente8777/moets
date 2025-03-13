@@ -23,7 +23,7 @@ const NextChapter: React.FC<theNextChapter> = ({
 }) => {
   return (
     <Section id="nextChapter" className="bg-secondary bg_image">
-      <SectionWithContainer containerClassName="relative lg:p-4">
+      <SectionWithContainer containerClassName="relative p-4">
         <div className="flex flex-col lg:gap-6 gap-4 items-center justify-center">
           <div className="">
             <HeaderLogo2 />
@@ -55,26 +55,30 @@ const NextChapter: React.FC<theNextChapter> = ({
             </div>
           </div>
         </div>
-        <div className="absolute top-0 left-0 ">
-          <div className="relative aspect-[4/1.5] lg:w-[15rem] lg:block hidden rotate-90">
+        <div className="absolute top-0 left-0  max-sm:left-3 max-sm:-top-6">
+          {/* <div className="relative aspect-[4/1.5] lg:w-[15rem] lg:block hidden rotate-90"> */}
             <Image
               src={"/group.png"}
               alt="alt"
-              fill
-              className={"object-contain"}
+              // fill
+              width={100}
+              height={100}
+              className={"object-contain rotate-90"}
             />
-          </div>
+          {/* </div> */}
         </div>
 
-        <div className="absolute bottom-0 right-0">
-          <div className="relative lg:w-[15rem] lg:block hidden aspect-[4/1.5] -rotate-90">
-            <Image
+        <div className="absolute bottom-0 right-0 max-sm:right-3 max-sm:-bottom-6">
+         {/* <div className="relative aspect-[4/1.5] lg:w-[15rem] lg:block hidden rotate-90"> */}
+         <Image
               src={"/group.png"}
               alt="alt"
-              fill
-              className={"object-contain"}
+              // fill
+              width={100}
+              height={100}
+              className={"object-contain -rotate-90"}
             />
-          </div>
+          {/* </div> */}
         </div>
       </SectionWithContainer>
     </Section>

@@ -25,6 +25,8 @@ const Gallery: React.FC<GalleryDataProps> = ({
     "col-span-2 row-span-1",
     "col-span-1 row-span-1",
     "col-span-1 row-span-1",
+    "col-span-2 row-span-1",
+    "col-span-2 row-span-2",
   ];
 
   return (
@@ -48,7 +50,7 @@ const Gallery: React.FC<GalleryDataProps> = ({
             className="text-primary text-center largeHeading mendl uppercase"
           />
         </div>
-        <div className="lg:grid hidden grid-cols-4 gap-6 auto-rows-[15rem] grid-flow-row w-full">
+        <div className="lg:grid hidden grid-cols-4 gap-6 auto-rows-[15.8rem] grid-flow-row w-full">
           {images.map((image, index) => (
             <div
               key={index}
@@ -60,7 +62,7 @@ const Gallery: React.FC<GalleryDataProps> = ({
                 fill
                 priority
                 loading="eager"
-                className={`object-cover ${index === 5 ? "object-top" : ""}`}
+                className={`object-cover ${index === 5 ? "object-top" : index === 8 ? "object-center" : index === 10 ? "object-bottom" : ""}`}
               />
             </div>
           ))}

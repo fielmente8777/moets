@@ -37,7 +37,7 @@ export const SocialLink: socialLinkProps[] = [
     id: 1,
     label: "instagram",
     icon: <FillInstagram />,
-    href: "https://www.instagram.com/moets.official/",
+    href: "https://www.instagram.com/moets.elan_epic?igsh=anE5Z3Nrdjl6a2g2&utm_source=qr",
   },
   {
     id: 2,
@@ -50,7 +50,7 @@ export const SocialLink: socialLinkProps[] = [
 
     label: "facebook",
     icon: <FillFacebook />,
-    href: "https://www.facebook.com/moets.official/?locale=en_GB",
+    href: "https://www.facebook.com/profile.php?id=61572585251692#",
   },
 ];
 
@@ -89,8 +89,9 @@ export const FooterLink: footerLinkProps[] = [
         id: 1,
         title: "address",
         label:
-          "LGF, Elan Epics, Southern Peripheral Rd, Opp. Tulip Voilet, Sector 70, Gurugram, Haryana - 122001",
-        href: "https://maps.app.goo.gl/9di9cekSU5ygmrhc6",
+          "LGF, Elan Epic, Southern Peripheral Rd, Opp. Tulip Voilet, Sector 70, Gurugram, Haryana - 122001",
+        href: "#",
+        // href: "https://maps.app.goo.gl/BoRStMAF63aWh4x79",
       },
       {
         id: 2,
@@ -111,12 +112,12 @@ export const FooterLink: footerLinkProps[] = [
   },
   {
     id: 3,
-    title: "opening hours",
+    title: "opening hours :",
     links: [
       {
         id: 1,
         label: "Mon to Sun",
-        href: "12:30PM – 12AM",
+        href: "12PM – 12AM",
       },
     ],
   },
