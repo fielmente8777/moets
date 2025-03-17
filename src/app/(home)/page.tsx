@@ -20,10 +20,10 @@ export default function Home() {
       <Gallery {...pageData.gallery} />
       <Testimonials {...pageData.Testimonials} />
       {/* <UpcomingEvents {...pageData.upcomingEvents} /> */}
-      <div className="bg_image">
+      {/* <div className="bg_bottom_image"> */}
         <ContactUs />
         <ContactCard {...pageData.contactNow} />
-      </div>
+      {/* </div> */}
     </main>
   );
 }

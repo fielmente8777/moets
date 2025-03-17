@@ -24,7 +24,7 @@ const Banner: React.FC<BannerProps> = ({
   src2,
 }) => {
   return (
-    <section className="max-w-[1600px] mx-auto w-full text-primary lg:mb-10 pb-10 ">
+    <section className="max-w-[1600px] mx-auto w-full text-primary lg:mb-10 pb-10 lg:pt-[40px] pt-6">
       <div className="grid lg:grid-cols-7 items-center gap-5 justify-center grid-cols-1 relative z-10">
         <div className="w-full lg:col-span-3 max-md:pt-4">
           <div className="flex flex-col lg:gap-4 gap-1 w-full ml-auto max-w-lg max-sm:px-4">
@@ -64,7 +64,7 @@ const Banner: React.FC<BannerProps> = ({
         </div>
         <div className="lg:col-span-4 w-full py-4 ps-4 relative lg:block hidden">
           <div className="relative w-full aspect-[4/2.3]">
-            <Image src={src} alt="alt" fill className="object-cover " />
+            <Image src={src} alt="alt" fill className="object-cover rounded-l-[8px]" />
           </div>
           <div className="absolute top-0 left-0 rotate-90">
             <Image

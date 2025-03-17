@@ -9,7 +9,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="max-screen w-full bg-secondary">
+    <footer className="max-screen w-full bg-secondary bg_top_image">
       <SectionWithContainer sectionClassName="">
         <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 lg:gap-20">
           <div className="w-full flex flex-col lg:gap-4 gap-2 max-sm:items-center">
@@ -41,7 +41,7 @@ const Footer = () => {
             </ul>
           </div>
           {FooterLink.map((link, i) => (
-            <div key={i} className="w-full flex flex-col gap-3">
+            <div key={i} className="w-full flex flex-col gap-4">
               <h2 className="heading1 uppercase text-primary mendl">
                 {link.title}
               </h2>
@@ -49,7 +49,7 @@ const Footer = () => {
                 {link.id === 3 ? (
                   <>
                     {link.links.map((item, i) => (
-                      <li key={i}>
+                      <li key={i} className="description2 avenir">
                         {item.label} {item.href}
                       </li>
                     ))}
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
       </SectionWithContainer>
       <SectionWithContainer sectionClassName="bg-secondary border-t border-primary !py-4 text-dark">
-        <div className="flex max-md:flex-col items-center lg:justify-between gap-4">
+        <div className="flex max-md:flex-col items-center lg:justify-center gap-4">
           <p className="text-center avenir">
             © {currentYear} Moets. <br className="lg:hidden" />
             All Rights Reserved. <br className="lg:hidden" />
@@ -90,7 +90,7 @@ const Footer = () => {
               Eazotel
             </Link>
           </p>
-          <p className="">Terms of Service Privacy Policy</p>
+          {/* <p className="">Terms of Service Privacy Policy</p> */}
         </div>
       </SectionWithContainer>
     </footer>

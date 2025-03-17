@@ -19,7 +19,7 @@ const TestimonialCard: React.FC<testimonialProps["cards"][0]> = ({
           fill
         />
       </div>
-      <Paragraph className="description1 font-medium" text={desc} />
+      <Paragraph className="description1 avenir font-light" text={desc} />
       <MainHeading
         h4
         className="font-bold lg:text-lg text-base montserrat text-[#363636]"

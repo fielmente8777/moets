@@ -95,18 +95,17 @@ export const FooterLink: footerLinkProps[] = [
       },
       {
         id: 2,
+        title: "email",
+        label: "operations.elanmall@moets.com",
+        href: "mailto:operations.elanmall@moets.com",
+      },
+      {
+        id: 3,
         title: "call",
         label: "+91 96677 52735",
         href: "tel:+91 96677 52735",
         label2: "+91 12448 91938",
         href2: "tel:+91 12448 91938",
-      },
-      
-      {
-        id: 3,
-        title: "email",
-        label: "operations.elanmall@moets.com",
-        href: "mailto:operations.elanmall@moets.com",
       },
     ],
   },

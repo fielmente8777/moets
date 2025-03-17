@@ -285,10 +285,14 @@ input {
   }
 }
 
-.bg_image {
+.bg_image,
+.bg_bottom_image,
+.bg_top_image {
   position: relative;
 }
 
+.bg_bottom_image::before,
+.bg_top_image::after,
 .bg_image::before,
 .bg_image::after {
   content: "";
@@ -300,12 +304,14 @@ input {
   left: 0;
 }
 
-.bg_image::before {
+.bg_image::before,
+.bg_bottom_image::before {
   background-image: url("/border.svg");
   bottom: 0;
 }
 
-.bg_image::after {
+.bg_image::after,
+.bg_top_image::after {
   background-image: url("/border.svg");
   top: 0;
 }

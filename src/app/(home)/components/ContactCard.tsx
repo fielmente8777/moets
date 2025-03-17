@@ -16,7 +16,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
     <SectionWithContainer>
       <div className="lg:grid grid-cols-7 flex-col flex w-full gap-6 lg:px-20 lg:py-10 max-sm:p-6 rounded-3xl bg-primary">
         <div className="lg:col-span-5 flex flex-col gap-4">
-          <h3 className="capitalize text-white largeHeading mendl max-sm:text-center">
+          <h3 className="capitalize text-white mediumHeading tracking-wide mendl max-sm:text-center">
             {title}
           </h3>
           <p className=" text-white description1 font-extralight avenir max-sm:text-center">{subTitle}</p>

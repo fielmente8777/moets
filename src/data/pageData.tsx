@@ -23,7 +23,7 @@ export const pageData = {
     title: "About Moets",
     subtitle: "THE MAGIC IN EVERY BITE",
     desc: "MOETS carries the legacy of its authentic Indian tandoor and curry dishes, crafted from recipes passed down through generations. The exceptional skill of the original chefs and their dedication to perfection remain the backbone of MOETS to this day.",
-    image:imageUrl + "im19.webp",
+    image: imageUrl + "im19.webp",
     buttons: [
       {
         label: "Call Us for Bookings",
@@ -185,9 +185,9 @@ export const pageData = {
     href: "tel:+91 96677 52735",
   },
   contactNow: {
-    title: "Contact US Now!",
+    title: "CRAFT UNFORGETTABLE CELEBRATIONS!",
     subTitle:
-      "Reserve Your Table Today for an Unforgettable Dining Experience and Exceptional Service.",
+      "Turn your special moments into lasting memories at Moets! From birthdays to anniversaries and private celebrations, we’ve got it all covered with exceptional service!",
     label: "Call Us for Bookings",
     href: "tel:+91 96677 52735",
   },
