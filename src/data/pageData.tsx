@@ -75,36 +75,36 @@ export const pageData = {
         category: "beverage menu",
         src: imageUrl + "menu3.webp",
       },
-      {
-        id: 7,
-        category: "Kitty Party Menu",
-        src: imageUrl + "im5.webp",
-      },
-      {
-        id: 8,
-        category: "Kitty Party Menu",
-        src: imageUrl + "im6.webp",
-      },
-      {
-        id: 9,
-        category: "Kitty Party Menu",
-        src: imageUrl + "im5.webp",
-      },
-      {
-        id: 10,
-        category: "Party Package Menu",
-        src: imageUrl + "im6.webp",
-      },
-      {
-        id: 11,
-        category: "Party Package Menu",
-        src: imageUrl + "im5.webp",
-      },
-      {
-        id: 12,
-        category: "Party Package Menu",
-        src: imageUrl + "im6.webp",
-      },
+      // {
+      //   id: 7,
+      //   category: "Kitty Party Menu",
+      //   src: imageUrl + "im5.webp",
+      // },
+      // {
+      //   id: 8,
+      //   category: "Kitty Party Menu",
+      //   src: imageUrl + "im6.webp",
+      // },
+      // {
+      //   id: 9,
+      //   category: "Kitty Party Menu",
+      //   src: imageUrl + "im5.webp",
+      // },
+      // {
+      //   id: 10,
+      //   category: "Party Package Menu",
+      //   src: imageUrl + "im6.webp",
+      // },
+      // {
+      //   id: 11,
+      //   category: "Party Package Menu",
+      //   src: imageUrl + "im5.webp",
+      // },
+      // {
+      //   id: 12,
+      //   category: "Party Package Menu",
+      //   src: imageUrl + "im6.webp",
+      // },
       {
         id: 13,
         category: "beverage menu",

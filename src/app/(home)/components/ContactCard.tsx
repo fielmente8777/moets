@@ -22,9 +22,10 @@ const ContactCard: React.FC<ContactCardProps> = ({
           <p className=" text-white description1 font-extralight avenir max-sm:text-center">{subTitle}</p>
         </div>
         <div className="lg:col-span-2 col-span-3 flex items-center justify-center lg:justify-end w-full h-full">
-          <Button href={href} label={label} className="border-white border avenir-book" />
+          <Button href={href} label={label} className="border-white bg-white !text-primary border avenir-book" />
         </div>
       </div>
+      <p className="text-primary text-center description1 avenir mt-2">*Veg Starting@₹899/- and Non-Veg Starting@₹1099/-</p>
     </SectionWithContainer>
   );
 };

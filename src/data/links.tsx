@@ -1,5 +1,5 @@
 import { footerLinkProps, navLinkProps, socialLinkProps } from "@/@types/types";
-import { FillFacebook, FillInstagram, FillTwitter } from "@/icons/icons";
+import { FillFacebook, FillInstagram } from "@/icons/icons";
 
 export const imageUrl =
   "https://eazotel-client-webp-image.s3.ap-south-1.amazonaws.com/moets/";
@@ -39,12 +39,12 @@ export const SocialLink: socialLinkProps[] = [
     icon: <FillInstagram />,
     href: "https://www.instagram.com/moets.elan_epic?igsh=anE5Z3Nrdjl6a2g2&utm_source=qr",
   },
-  {
-    id: 2,
-    label: "twitter",
-    icon: <FillTwitter />,
-    href: "#",
-  },
+  // {
+  //   id: 2,
+  //   label: "twitter",
+  //   icon: <FillTwitter />,
+  //   href: "#",
+  // },
   {
     id: 3,
 
@@ -111,7 +111,7 @@ export const FooterLink: footerLinkProps[] = [
   },
   {
     id: 3,
-    title: "opening hours :",
+    title: "opening hours",
     links: [
       {
         id: 1,
