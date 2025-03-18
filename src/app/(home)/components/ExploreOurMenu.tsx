@@ -42,12 +42,12 @@ const ExploreOurMenu: React.FC<exploreOurMenu> = ({
       sectionId="menu"
     >
       <div className="flex flex-col gap-6 lg:gap-10 items-center justify-center max-sm:overflow-hidden">
-        <div className="">
+        <div className="flex flex-col items-center justify-center">
           <HeaderLogo2 />
           <MainHeading
             h2
             title={title}
-            className="text-center heading1 artifex tracking-wider"
+            className="text-center heading1 artifex tracking-wide"
           />
         </div>
         <div className="flex items-center justify-center gap-4 overflow-x-scroll w-full hide-scrollbar">
