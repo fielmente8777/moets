@@ -22,8 +22,8 @@ export const pageData = {
   aboutUsData: {
     title: "About Moets",
     subtitle: "THE MAGIC IN EVERY BITE",
-    desc: "MOETS carries the legacy of its authentic Indian tandoor and curry dishes, crafted from recipes passed down through generations. The exceptional skill of the original chefs and their dedication to perfection remain the backbone of MOETS to this day.",
-    image: imageUrl + "im19.webp",
+    desc: "MOETS carries the legacy of its authentic Indian tandoor and curry dishes to its amazing Chinese flavors, crafted from recipes passed down through generations. The exceptional skill of the original chefs and their dedication to perfection remain the backbone of MOETS to this day.",
+    image: imageUrl + "aboutim.webp",
     buttons: [
       {
         label: "Call Us for Bookings",

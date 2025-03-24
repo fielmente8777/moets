@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   // }, [isOpen]);
 
   return (
-    <header className="relative z-10">
+    <header className="max-w-[1600px] mx-auto w-full bg-secondary">
       <Container>
         <nav className="flex items-center justify-between">
           {/* <button

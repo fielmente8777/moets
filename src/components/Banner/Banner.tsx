@@ -24,8 +24,8 @@ const Banner: React.FC<BannerProps> = ({
   src2,
 }) => {
   return (
-    <section className="max-w-[1600px] mx-auto w-full text-primary lg:mb-10 pb-10 lg:pt-[40px] pt-6">
-      <div className="grid lg:grid-cols-7 items-center gap-5 justify-center grid-cols-1 relative z-10">
+    <section className="max-w-[1600px] mx-auto w-full text-primary lg:mb-10 pb-10 lg:pb-20 lg:pt-[40px] pt-6 relative">
+      <div className="grid lg:grid-cols-7 items-center gap-5 lg:gap-10 justify-center grid-cols-1 relative z-10">
         <div className="w-full lg:col-span-3 max-md:pt-4">
           <div className="flex flex-col lg:gap-4 gap-1 w-full ml-auto max-w-lg max-sm:px-4">
             <h1 className="heading1 artifex capitalize font-medium max-sm:text-center">
@@ -62,11 +62,11 @@ const Banner: React.FC<BannerProps> = ({
             </div>
           </div>
         </div>
-        <div className="lg:col-span-4 w-full py-4 ps-4 relative lg:block hidden">
-          <div className="relative w-full aspect-[4/2.3]">
+        <div className="lg:col-span-4 w-full py-4 ps-8 relative lg:block hidden lg:-mr-8">
+          <div className="relative w-full max-w-4xl aspect-[4/2.5]">
             <Image src={src} alt="alt" fill className="object-cover rounded-l-[8px]" />
           </div>
-          <div className="absolute top-0 left-0 rotate-90">
+          <div className="absolute top-0 left-4 rotate-90">
             <Image
               src={"/group.png"}
               alt="alt"
@@ -75,7 +75,7 @@ const Banner: React.FC<BannerProps> = ({
               className={"object-contain"}
             />
           </div>
-          <div className="absolute bottom-0 left-0 w-full">
+          <div className="absolute bottom-0 left-4 ">
             <Image
               src={"/group.png"}
               alt="alt"
@@ -86,7 +86,7 @@ const Banner: React.FC<BannerProps> = ({
           </div>
         </div>
       </div>
-      <div className="w-full absolute top-0 left-0 lg:h-screen  bg-secondary h-[930px] lg:rounded-bl-[13rem] rounded-bl-[8rem]"></div>
+      <div className="w-full absolute inset-0  bg-secondary lg:rounded-bl-[13rem] rounded-bl-[8rem]"></div>
     </section>
   );
 };

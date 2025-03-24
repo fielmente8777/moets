@@ -22,7 +22,7 @@ const Footer = () => {
               />
             </div>
             <p className=" avenir text-dark description1">
-              Traditional Indian cuisine, crafted to perfection
+              Traditional Indian & Chinese cuisine, crafted to perfection
             </p>
             <ul className="flex items-center max-sm:justify-center w-full gap-4 mt-4">
               {SocialLink.map((link, i) => (
@@ -49,7 +49,7 @@ const Footer = () => {
                 {link.id === 3 ? (
                   <>
                     {link.links.map((item, i) => (
-                      <li key={i} className="description2 avenir">
+                      <li key={i} className="description2 avenir text-dark">
                         {item.label} {item.href}
                       </li>
                     ))}
@@ -58,15 +58,15 @@ const Footer = () => {
                   <>
                     {link.links.map((item, i) => (
                       <li key={i}>
-                        <Link href={item.href} className="description2 avenir">
+                        <Link href={item.href} className="description2 avenir text-dark">
                           {item.label}
                         </Link>
-                        {item.href2 && <>,{" "}</>}
+                        {item.href2 && <>, </>}
 
                         {item.href2 && (
                           <Link
                             href={item.href2}
-                            className="description2 avenir"
+                            className="description2 avenir text-dark"
                           >
                             {item.label2}
                           </Link>
