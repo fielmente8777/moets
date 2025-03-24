@@ -13,7 +13,7 @@ const TwoColGridCard: React.FC<AboutUsDataProps> = ({
 }) => {
   return (
     <>
-      <div className={`lg:grid grid-cols-2 lg:items-center gap-6 `}>
+      <div className={`lg:grid grid-cols-2 lg:items-center gap-6 lg:gap-24`}>
         <div className={`col-span-1 w-full lg:block hidden`}>
           <div className="relative w-full aspect-[4/5.6]">
             <Image src={image} alt="alt" fill className={"object-cover"} />
