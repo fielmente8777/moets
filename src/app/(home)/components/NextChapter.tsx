@@ -58,7 +58,7 @@ const NextChapter: React.FC<theNextChapter> = ({
         <div className="absolute top-0 left-0  max-sm:left-3 max-sm:-top-6">
           {/* <div className="relative aspect-[4/1.5] lg:w-[15rem] lg:block hidden rotate-90"> */}
             <Image
-              src={"/group.png"}
+              src={"/Group.png"}
               alt="alt"
               // fill
               width={100}
@@ -71,7 +71,7 @@ const NextChapter: React.FC<theNextChapter> = ({
         <div className="absolute bottom-0 right-0 max-sm:right-3 max-sm:-bottom-6">
          {/* <div className="relative aspect-[4/1.5] lg:w-[15rem] lg:block hidden rotate-90"> */}
          <Image
-              src={"/group.png"}
+              src={"/Group.png"}
               alt="alt"
               // fill
               width={100}

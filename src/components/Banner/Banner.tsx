@@ -68,7 +68,7 @@ const Banner: React.FC<BannerProps> = ({
           </div>
           <div className="absolute top-0 left-4 rotate-90">
             <Image
-              src={"/group.png"}
+              src={"/Group.png"}
               alt="alt"
               width={100}
               height={100}
@@ -77,7 +77,7 @@ const Banner: React.FC<BannerProps> = ({
           </div>
           <div className="absolute bottom-0 left-4 ">
             <Image
-              src={"/group.png"}
+              src={"/Group.png"}
               alt="alt"
               width={100}
               height={100}
