@@ -5,7 +5,8 @@ export const pageData = {
     title: "THE MOETS LEGACY LIVES ON",
     subTitle: "From Tandoors to Timeless Taste:",
     src: imageUrl + "im18.webp",
-    src2: imageUrl + "banner2.webp",
+    src2: imageUrl + "im18.webp",
+    // src2: imageUrl + "banner2.webp",
     desc: `In the 1960s, inspired by the success of Bahar-E-Kebab, a renowned ITC restaurant, Mr. P.P. Bindra decided to bring authentic barbecue to Delhi. His dream led to the creation of MOETS in Defence Colony, where age-old recipes and a team of skilled chefs set the foundation for a culinary icon. <br />
 <b class="font-bold mt-2">"We started with one mission: to bring people together over great food." — Mr. P.P. Bindra</b>`,
     buttons: [
