@@ -64,7 +64,12 @@ const Banner: React.FC<BannerProps> = ({
         </div>
         <div className="lg:col-span-4 w-full py-4 ps-8 relative lg:block hidden lg:-mr-8">
           <div className="relative w-full max-w-4xl aspect-[4/2.5]">
-            <Image src={src} alt="alt" fill className="object-cover rounded-l-[8px]" />
+            <Image
+              src={src}
+              alt="alt"
+              fill
+              className="object-cover rounded-l-[8px]"
+            />
           </div>
           <div className="absolute top-0 left-4 rotate-90">
             <Image

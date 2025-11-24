@@ -1,7 +1,8 @@
+import { Call, Whatsapp } from "@/components";
+import Footer from "@/components/footer/Footer";
 import type { Metadata } from "next";
 import { Geist, Nunito } from "next/font/google";
 import "./globals.scss";
-import { Call, Footer, Navbar, Whatsapp } from "@/components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${nunito.variable} antialiased`}
         suppressHydrationWarning={true}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
         <Footer />
         <Whatsapp whatsAppNumber="9667752735" />
