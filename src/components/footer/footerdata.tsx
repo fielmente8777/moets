@@ -2,7 +2,6 @@ import {
   FillCallIcon,
   FillFaceBookIcon,
   FillInstaIcon,
-  FillLinkedinIcon,
   FillLocationIcon,
   FillMailIcon,
 } from "@/icons/icons";
@@ -66,11 +65,11 @@ export const footerData: FooterData = {
           label: "Instagram",
           href: contact.socialMedia.instagram,
         },
-        {
-          icon: <FillLinkedinIcon />,
-          label: "Linkedin",
-          href: contact.socialMedia.instagram,
-        },
+        // {
+        //   icon: <FillLinkedinIcon />,
+        //   label: "Linkedin",
+        //   href: contact.socialMedia.instagram,
+        // },
       ],
     },
   ],
@@ -118,11 +117,11 @@ export const footerData2: FooterData = {
           label: "Instagram",
           href: contact.socialMedia.instagram,
         },
-        {
-          icon: <FillLinkedinIcon />,
-          label: "Linkedin",
-          href: contact.socialMedia.linkedin,
-        },
+        // {
+        //   icon: <FillLinkedinIcon />,
+        //   label: "Linkedin",
+        //   href: contact.socialMedia.linkedin,
+        // },
       ],
     },
   ],

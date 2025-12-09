@@ -1,7 +1,7 @@
 const enCodeText = encodeURIComponent("I'm looking for - Pre-booking Inquiry");
 export const contact = {
-  email: "sales@XYZ.com",
-  phone: ["+91 9667752735"],
+  email: "bhumika.tikhatri@stayvista.com",
+  phone: ["+91 9653246027"],
   address: "24RJ+3WQ Chhatan Seri, Himachal Pradesh, India",
 
   addressLink: "https://maps.app.goo.gl",
@@ -13,7 +13,7 @@ export const contact = {
       "https://www.instagram.com/moets.elan_epic/?igsh=anE5Z3Nrdjl6a2g2&utm_source=qr#",
     linkedin: "https://www.linkedin.com/",
   },
-  WhatsappCta: `https://wa.me/+919667752735?text=${enCodeText}`,
+  WhatsappCta: `https://wa.me/+919653246027?text=${enCodeText}`,
   formDomain: "testmulti",
 };
 

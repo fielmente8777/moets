@@ -56,7 +56,7 @@ const Testimonial = ({ title, subTitle, cards, images, link }: Testimonial) => {
         <div className="lg:col-span-4 col-span-1 space-y-6 p-3">
           <div>
             <h2>{title}</h2>
-            <h3 className="md:text-5xl text-3xl text-primary2 font-medium">
+            <h3 className="md:text-5xl text-3xl text-primary2 font-medium mendl">
               {subTitle}
             </h3>
           </div>

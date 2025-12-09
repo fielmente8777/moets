@@ -29,8 +29,8 @@ const Experience = ({ title, subTitle, cards, link }: ExperienceProps) => {
       <Container className="">
         <div className="flex justify-end">
           <div className="flex flex-col items-end max-w-96 w-full">
-            <h2>{title}</h2>
-            <h3 className="md:text-5xl text-3xl text-end text-primary2">
+            <h2 className="avenir">{title}</h2>
+            <h3 className="md:text-5xl text-3xl text-end text-primary2 mendl">
               {subTitle}
             </h3>
           </div>
@@ -73,7 +73,7 @@ const Experience = ({ title, subTitle, cards, link }: ExperienceProps) => {
                 />
 
                 <div className="absolute bottom-0 bg-white/60 w-full flex justify-center py-2">
-                  <h2>{card.title}</h2>
+                  <h2 className="avenir">{card.title}</h2>
                 </div>
               </div>
             )}

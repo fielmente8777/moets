@@ -43,8 +43,8 @@ const About = ({ title, subtitle, description, image, link }: AboutUsProps) => {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-center">{title}</h2>
-              <h3 className="text-center md:text-6xl text-3xl text-primary2">
+              <h2 className="text-center avenir">{title}</h2>
+              <h3 className="text-center md:text-6xl text-3xl text-primary2 mendl">
                 {subtitle}
               </h3>
             </div>

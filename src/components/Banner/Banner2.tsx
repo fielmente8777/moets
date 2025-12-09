@@ -48,7 +48,7 @@ const Banner2 = ({ title, image, logo, location, link }: BannerProps) => {
             </div>
 
             <div className="text-white">
-              <p className="text-center flex items-center gap-2 justify-center">
+              <p className="text-center flex items-center gap-2 justify-center avenir">
                 <LocationIcon /> {location}
               </p>
               <h2 className="md:text-5xl text-3xl text-center font-bold uppercase max-w-96 mt-4">

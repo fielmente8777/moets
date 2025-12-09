@@ -73,7 +73,7 @@ export const pageData = {
     title: "LUXURY ACCOMMODATION AT",
     subtitle: "Moets Waterfront Estate",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Nestled along the water’s edge, Moets Waterfront Estate combines modern elegance with natural beauty, offering spacious living areas, stylish interiors, and top-notch amenities. The property is designed to provide guests with a tranquil retreat, featuring expansive outdoor spaces and a fully equipped kitchen for a seamless stay. With its stunning location and attention to detail, Moets Waterfront Estate Raison ensures a memorable experience for anyone seeking comfort and sophistication in a peaceful waterfront setting.",
     images: [
       {
         src: "/images/Room1.jpg",
@@ -126,14 +126,24 @@ export const pageData = {
 
     cards: [
       {
-        name: "Lorem",
+        name: "Praveen Trivedi",
         review:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+          "What an amazing stay, amazing riverfront property and delicious food. The entire staff like Naresh ji and chef Rama ji were amazing. Rama ji prepared the food exactly as per our taste every time. Rooms were beautiful, especially the first-floor ones with a nice river view. Overall an amazing stay.",
       },
       {
-        name: "John Doe",
+        name: "Padmanabha Sarkar",
         review:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+          "Love the ambience and the service was exceptional. Amenities were ample with tons of recreational options. Highly recommended for Manali visitors.",
+      },
+      {
+        name: "Yogesh Sawant",
+        review:
+          "The little mansion is right next to the Beas river with a massive lawn and outdoor spaces. The food was exceptionally good with amazing flavours and texture. Had an amazing 4-day stay close to Manali yet secluded.",
+      },
+      {
+        name: "Akhilesh Kumar Trivedi",
+        review:
+          "We had a great stay at Moets Waterfront Estate at Raison. The riverfront was amazing, and we took long leisurely walks along it. The food was particularly good, and the people were nice. Maintenance could have been better, but overall, it was an excellent experience.",
       },
     ],
 

@@ -1,9 +1,9 @@
 "use client";
 import { Section } from "@/components";
 import LinkButton from "@/components/buttons/LinkButton";
+import AmenitiesPopUp from "@/components/Popup/AmenitiesPopUp";
 import SwiperCarousel from "@/components/Sliders/SwiperCarousel";
 import Image from "next/image";
-import Link from "next/link";
 
 import React from "react";
 import { Navigation } from "swiper/modules";
@@ -29,7 +29,34 @@ const Accomodation = ({
   images,
   link,
 }: AccomodationProps) => {
+  const [isOpen, setIsOpen] = React.useState(false);
   const isNavigation = images?.length > 1 ? true : false;
+  const viewAllAmenties = [
+    {
+      amenityType: "Amenities",
+      amenities: [
+        "Bonfire",
+        "BBQ",
+        "Lawn",
+        "Balcony / Terrace",
+        "Heater",
+        "Wi-Fi",
+        "Indoor / Outdoor Games",
+        "Bathtub",
+        "Music System / Speaker",
+        "TV",
+        "Refrigerator",
+        "Driver / Staff Accommodation",
+        "Bar",
+        "Parking",
+        "Daily Housekeeping",
+        "Bathroom",
+        "In-room Dining",
+        "Mineral Water",
+        "Room Service",
+      ],
+    },
+  ];
   return (
     <Section className="bg-primary2 md:!pt-32 text-white relative">
       <div className="w-full h-full">
@@ -45,12 +72,21 @@ const Accomodation = ({
             </div>
 
             <div className="space-y-4">
-              <h2 className="">{title}</h2>
-              <h3 className="md:text-6xl text-3xl">{subtitle}</h3>
+              <h2 className="avenir">{title}</h2>
+              <h3 className="md:text-6xl text-3xl mendl">{subtitle}</h3>
 
-              <Link href={"/"} className="underline inline-block">
+              <button
+                className="underline inline-block"
+                onClick={() => setIsOpen(!isOpen)}
+              >
                 VIEW AMENITIES
-              </Link>
+              </button>
+
+              <AmenitiesPopUp
+                viewAllAmenities={viewAllAmenties}
+                isOpen={isOpen}
+                setIsOpenAmenityPopup={() => setIsOpen(false)}
+              />
             </div>
 
             <div className="lg:hidden block w-full aspect-square">

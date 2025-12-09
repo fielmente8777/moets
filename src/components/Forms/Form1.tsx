@@ -5,6 +5,7 @@ import axios from "axios";
 import { ChangeEvent, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import CustomCaptchaForm from "./CaptchaForm";
 
 interface formProps {
   setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -25,6 +26,7 @@ const Form1: React.FC<formProps> = ({
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [captchaOpen, setCaptchaOpen] = useState(false);
 
   const [formData, setFormData] = useState({
     checkIn: "",
@@ -145,8 +147,68 @@ const Form1: React.FC<formProps> = ({
       return;
     }
 
-    setIsSubmitting(true);
+    setCaptchaOpen(true);
+    // setIsSubmitting(true);
 
+    // try {
+    //   const { data } = await axios.post(
+    //     "https://nexon.eazotel.com/eazotel/addcontacts",
+    //     {
+    //       Domain: contact.formDomain,
+    //       email: formData?.EmailId,
+    //       Name: formData?.fullName,
+    //       Contact: formData?.PhoneNumber,
+    //       Description: `Check-in ${formData?.checkIn}, Check-out: ${formData?.checkOut},`,
+    //       check_in: `${formData?.checkIn}`,
+    //       check_out: `${formData?.checkOut}`,
+    //       created_from: "website",
+    //     },
+    //     {
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //     }
+    //   );
+
+    //   if (data.Status) {
+    //     // Reset form completely
+    //     setFormData({
+    //       checkIn: "",
+    //       checkOut: "",
+    //       fullName: "",
+    //       PhoneNumber: "",
+    //       EmailId: "",
+    //     });
+    //     setDateRange([null, null]);
+    //     setError({
+    //       checkIn: "",
+    //       checkOut: "",
+    //       fullName: "",
+    //       PhoneNumber: "",
+    //       EmailId: "",
+    //     });
+
+    //     setSubmitSuccess(true);
+    //     setTimeout(() => setSubmitSuccess(false), 3000);
+
+    //     if (setOpen) {
+    //       setOpen(false);
+    //     }
+    //     window.open("/thank-you", "_blank");
+    //   } else {
+    //     alert(data.message || "Something went wrong!");
+    //   }
+    // } catch (error) {
+    //   console.error("Submission error:", error);
+    //   alert("An error occurred. Please try again later.");
+    // } finally {
+    //   setIsSubmitting(false);
+    // }
+  };
+
+  const handleFormSubmitAfterCaptcha = async () => {
+    setCaptchaOpen(false);
+    setIsSubmitting(true);
     try {
       const { data } = await axios.post(
         "https://nexon.eazotel.com/eazotel/addcontacts",
@@ -166,7 +228,6 @@ const Form1: React.FC<formProps> = ({
           },
         }
       );
-
       if (data.Status) {
         // Reset form completely
         setFormData({
@@ -184,10 +245,8 @@ const Form1: React.FC<formProps> = ({
           PhoneNumber: "",
           EmailId: "",
         });
-
         setSubmitSuccess(true);
         setTimeout(() => setSubmitSuccess(false), 3000);
-
         if (setOpen) {
           setOpen(false);
         }
@@ -204,159 +263,173 @@ const Form1: React.FC<formProps> = ({
   };
 
   return (
-    <form
-      onSubmit={handleFormSubmit}
-      className={`grid ${
-        !gridView ? "md:grid-cols-10" : "gap-2 bg-transparent"
-      } grid-cols-2 max-md:gap-2  divide-x divide-[#E0E0E0] barlow uppercase`}
-      ref={formRef}
-    >
-      {/* Full Name Field */}
-      <div
-        className={`col-span-2 h-full flex flex-col px-4 py-4 ${
-          rounded && "lg:rounded-l-2xl"
-        } bg-[#fff] `}
+    <>
+      <form
+        onSubmit={handleFormSubmit}
+        className={`grid ${
+          !gridView ? "md:grid-cols-10" : "gap-2 bg-transparent"
+        } grid-cols-2 max-md:gap-2  divide-x divide-[#E0E0E0] barlow uppercase`}
+        ref={formRef}
       >
-        <label
-          htmlFor="fullName"
-          className="text-sm max-md:py-3 text-[#343434]"
+        {/* Full Name Field */}
+        <div
+          className={`col-span-2 h-full flex flex-col px-4 py-4 ${
+            rounded && "lg:rounded-l-2xl"
+          } bg-[#fff] `}
         >
-          Full Name*
-        </label>
-        <input
-          id="fullName"
-          type="text"
-          name="fullName"
-          aria-label="Full Name*"
-          placeholder="Type Here ..."
-          onChange={handleInputChange}
-          value={formData.fullName}
-          className="outline-none max-md:border-b-[.5px] w-full h-full bg-transparent text-base text-[#343434] placeholder:text-[#343434]"
-        />
-        {error.fullName && (
-          <span className="text-red-500 text-xs px-1 w-full">
-            {error.fullName}
-          </span>
-        )}
-      </div>
-
-      {/* Phone Number Field */}
-      <div className={`col-span-2 w-full flex flex-col px-4 bg-[#fff]`}>
-        <label
-          htmlFor="PhoneNumber"
-          className="text-sm max-md:py-3 text-[#343434]"
-        >
-          Phone Number*
-        </label>
-        <div className="flex items-center w-full h-full max-md:border-b-[.5px]">
-          <select
-            aria-label="Country Code"
-            id="countryCode"
-            name="countryCode"
-            value={countryCode}
-            onChange={(e) => setCountryCode(e.target.value)}
-            className={`text-[#343434] placeholder:text-[#343434] focus:outline-none w-full bg-transparent`}
-            style={{ width: `${countryCode.length * 2}ch` }}
+          <label
+            htmlFor="fullName"
+            className="text-sm max-md:py-3 text-[#343434]"
           >
-            {countries.map((country, index) => (
-              <option
-                key={index + 101}
-                value={country.code}
-                aria-label={country.name}
-                className="bg-gray-100"
-              >
-                {`${country.code}`}
-              </option>
-            ))}
-          </select>
-
+            Full Name*
+          </label>
           <input
-            type="tel"
-            name="PhoneNumber"
-            aria-label="Phone Number*"
+            id="fullName"
+            type="text"
+            name="fullName"
+            aria-label="Full Name*"
             placeholder="Type Here ..."
             onChange={handleInputChange}
-            value={formData.PhoneNumber}
-            className=" ps-1 outline-none no-spinner appearance-auto  w-full h-full text-base text-[#343434] placeholder:text-[#343434] bg-transparent"
+            value={formData.fullName}
+            className="outline-none max-md:border-b-[.5px] w-full h-full bg-transparent text-base text-[#343434] placeholder:text-[#343434]"
           />
-        </div>
-        {error.PhoneNumber && (
-          <span className="text-red-500 text-xs px-1 w-full">
-            {error.PhoneNumber}
-          </span>
-        )}
-      </div>
-
-      {/* Email Field */}
-      <div className={`col-span-2 h-full px-4 flex flex-col bg-[#fff]`}>
-        <label htmlFor="EmailId" className="text-sm max-md:py-3 text-[#343434]">
-          Email Id*
-        </label>
-        <input
-          type="text"
-          name="EmailId"
-          aria-label="Email Id*"
-          placeholder="Type Here ..."
-          onChange={handleInputChange}
-          value={formData.EmailId}
-          className="outline-none max-md:border-b-[.5px] w-full h-full bg-transparent text-base text-[#343434] placeholder:text-[#343434]"
-        />
-        {error.EmailId && (
-          <span className="text-red-500 text-xs px-1 w-full">
-            {error.EmailId}
-          </span>
-        )}
-      </div>
-
-      {/* Date Picker Field */}
-      <div className={`col-span-2 flex flex-col px-4 bg-[#fff] relative`}>
-        <label htmlFor="checkIn" className="text-sm max-md:py-3 text-[#343434]">
-          Check In & Check Out*
-        </label>
-        <DatePicker
-          selected={startDate}
-          onChange={handleDateChange}
-          selectsStart
-          selectsRange
-          startDate={startDate}
-          endDate={endDate}
-          minDate={new Date(min || Date.now())}
-          placeholderText="Select Date"
-          className="outline-none max-md:border-b-[.5px] w-full h-full bg-transparent text-base text-[#343434] placeholder:text-[#343434]"
-          wrapperClassName="w-full h-full !flex items-center"
-        />
-        <div className="absolute md:right-2 right-6 md:top-1/2 top-[3.6rem] md:-translate-y-1/2 transform pointer-events-none">
-          <CalenderIcon />
-        </div>
-        {(error.checkIn || error.checkOut) && (
-          <span className="text-red-500 text-xs px-1 w-full">
-            {error.checkIn || error.checkOut}
-          </span>
-        )}
-      </div>
-
-      {/* Submit Button */}
-      <div
-        className={`h-full col-span-2 max-md:col-span-2 md:px-2 ${
-          rounded && "lg:rounded-r-2xl overflow-hidden"
-        } ${gridView && "col-span-2"} flex items-center bg-[#fff]`}
-      >
-        <button
-          type="submit"
-          aria-label="Book Now"
-          className="text-center bg-primary2 py-4 w-full h-fit text-white  hover:bg-primary duration-300 transition-all ease-in-out uppercase"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? (
-            <span className="border-t-2 border-white w-6 h-6 animate-spin mx-auto block" />
-          ) : submitSuccess ? (
-            "Thank You!"
-          ) : (
-            "Book Now"
+          {error.fullName && (
+            <span className="text-red-500 text-xs px-1 w-full">
+              {error.fullName}
+            </span>
           )}
-        </button>
-      </div>
-    </form>
+        </div>
+
+        {/* Phone Number Field */}
+        <div className={`col-span-2 w-full flex flex-col px-4 bg-[#fff]`}>
+          <label
+            htmlFor="PhoneNumber"
+            className="text-sm max-md:py-3 text-[#343434]"
+          >
+            Phone Number*
+          </label>
+          <div className="flex items-center w-full h-full max-md:border-b-[.5px]">
+            <select
+              aria-label="Country Code"
+              id="countryCode"
+              name="countryCode"
+              value={countryCode}
+              onChange={(e) => setCountryCode(e.target.value)}
+              className={`text-[#343434] placeholder:text-[#343434] focus:outline-none w-full bg-transparent`}
+              style={{ width: `${countryCode.length * 2}ch` }}
+            >
+              {countries.map((country, index) => (
+                <option
+                  key={index + 101}
+                  value={country.code}
+                  aria-label={country.name}
+                  className="bg-gray-100"
+                >
+                  {`${country.code}`}
+                </option>
+              ))}
+            </select>
+
+            <input
+              type="tel"
+              name="PhoneNumber"
+              aria-label="Phone Number*"
+              placeholder="Type Here ..."
+              onChange={handleInputChange}
+              value={formData.PhoneNumber}
+              className=" ps-1 outline-none no-spinner appearance-auto  w-full h-full text-base text-[#343434] placeholder:text-[#343434] bg-transparent"
+            />
+          </div>
+          {error.PhoneNumber && (
+            <span className="text-red-500 text-xs px-1 w-full">
+              {error.PhoneNumber}
+            </span>
+          )}
+        </div>
+
+        {/* Email Field */}
+        <div className={`col-span-2 h-full px-4 flex flex-col bg-[#fff]`}>
+          <label
+            htmlFor="EmailId"
+            className="text-sm max-md:py-3 text-[#343434]"
+          >
+            Email Id*
+          </label>
+          <input
+            type="text"
+            name="EmailId"
+            aria-label="Email Id*"
+            placeholder="Type Here ..."
+            onChange={handleInputChange}
+            value={formData.EmailId}
+            className="outline-none max-md:border-b-[.5px] w-full h-full bg-transparent text-base text-[#343434] placeholder:text-[#343434]"
+          />
+          {error.EmailId && (
+            <span className="text-red-500 text-xs px-1 w-full">
+              {error.EmailId}
+            </span>
+          )}
+        </div>
+
+        {/* Date Picker Field */}
+        <div className={`col-span-2 flex flex-col px-4 bg-[#fff] relative`}>
+          <label
+            htmlFor="checkIn"
+            className="text-sm max-md:py-3 text-[#343434]"
+          >
+            Check In & Check Out*
+          </label>
+          <DatePicker
+            selected={startDate}
+            onChange={handleDateChange}
+            selectsStart
+            selectsRange
+            startDate={startDate}
+            endDate={endDate}
+            minDate={new Date(min || Date.now())}
+            placeholderText="Select Date"
+            className="outline-none max-md:border-b-[.5px] w-full h-full bg-transparent text-base text-[#343434] placeholder:text-[#343434]"
+            wrapperClassName="w-full h-full !flex items-center"
+          />
+          <div className="absolute md:right-2 right-6 md:top-1/2 top-[3.6rem] md:-translate-y-1/2 transform pointer-events-none">
+            <CalenderIcon />
+          </div>
+          {(error.checkIn || error.checkOut) && (
+            <span className="text-red-500 text-xs px-1 w-full">
+              {error.checkIn || error.checkOut}
+            </span>
+          )}
+        </div>
+
+        {/* Submit Button */}
+        <div
+          className={`h-full col-span-2 max-md:col-span-2 md:px-2 ${
+            rounded && "lg:rounded-r-2xl overflow-hidden"
+          } ${gridView && "col-span-2"} flex items-center bg-[#fff]`}
+        >
+          <button
+            type="submit"
+            aria-label="Book Now"
+            className="text-center bg-primary2 py-4 w-full h-fit text-white  hover:bg-primary duration-300 transition-all ease-in-out uppercase"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <span className="border-t-2 border-white w-6 h-6 animate-spin mx-auto block" />
+            ) : submitSuccess ? (
+              "Thank You!"
+            ) : (
+              "Book Now"
+            )}
+          </button>
+        </div>
+      </form>
+
+      <CustomCaptchaForm
+        isOpen={captchaOpen}
+        onSuccess={handleFormSubmitAfterCaptcha}
+        onClose={() => setCaptchaOpen(false)}
+      />
+    </>
   );
 };
 
