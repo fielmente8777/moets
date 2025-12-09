@@ -50,7 +50,7 @@ const CustomCaptchaForm = ({ isOpen, onSuccess }: formProps) => {
           <div className="flex justify-end">
             <span
               className="font-bold cursor-pointer"
-              onClick={() => setOpen(false)}
+              // onClick={() => setOpen(false)}
             >
               X
             </span>
