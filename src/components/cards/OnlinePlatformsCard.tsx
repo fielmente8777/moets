@@ -1,4 +1,4 @@
-import { OnlinePlatformsPropsTypes } from "@/app/estate/components/OnlinePlatforms";
+import { OnlinePlatformsPropsTypes } from "@/app/(estate)/components/OnlinePlatforms";
 import Image from "next/image";
 import { FC } from "react";
 
