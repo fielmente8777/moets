@@ -6,7 +6,7 @@ import SwiperCarousel from "@/components/Sliders/SwiperCarousel";
 import Image from "next/image";
 
 import React from "react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 type AccomodationProps = {
   title: string;
@@ -93,6 +93,10 @@ const Accomodation = ({
               <SwiperCarousel
                 data={images}
                 className="w-full h-full"
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 3000,
+                }}
                 renderSlide={(img) => {
                   return (
                     <div className="w-full h-full relative">
@@ -127,7 +131,10 @@ const Accomodation = ({
               data={images}
               className="w-full h-full"
               navigation={isNavigation}
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 3000,
+              }}
               renderSlide={(img) => {
                 return (
                   <div className="w-full h-full relative">

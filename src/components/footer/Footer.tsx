@@ -20,7 +20,7 @@ const Footer = () => {
       <Container>
         <div className="grid md:py-12 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
           <div className="md:max-w-[300px] flex flex-col gap-4 items-center">
-            <div className="w-[300px] relative md:w-3xl aspect-4/1">
+            <div className="w-[300px] relative md:w-60 aspect-square">
               <Image
                 src={data.logo}
                 alt="logo"

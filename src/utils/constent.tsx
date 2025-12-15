@@ -14,6 +14,7 @@ export const contact = {
     linkedin: "https://www.linkedin.com/",
   },
   WhatsappCta: `https://wa.me/+919653246027?text=${enCodeText}`,
+  bookingCta: "https://www.stayvista.com/villa/moets-waterfront-estate-raison",
   formDomain: "testmulti",
 };
 

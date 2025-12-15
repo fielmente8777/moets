@@ -1,20 +1,20 @@
 "use client";
 import { Container, Section } from "@/components";
 import LinkButton from "@/components/buttons/LinkButton";
-import SwiperCarousel from "@/components/Sliders/SwiperCarousel";
-import Image from "next/image";
-import React from "react";
+import ExperiencesSlider from "@/components/Sliders/ExperiencesSlider";
 
-type ExperienceProps = {
+export type ExperienceProps = {
   title: string;
   subTitle?: string;
 
   cards: {
-    title: string;
-    image: {
-      src: string;
-      alt: string;
-    };
+    images: {
+      title: string;
+      image: {
+        src: string;
+        alt: string;
+      };
+    }[];
   }[];
 
   link: {
@@ -36,7 +36,9 @@ const Experience = ({ title, subTitle, cards, link }: ExperienceProps) => {
           </div>
         </div>
 
-        <div className="lg:grid hidden md:grid-cols-3 gap-5 mt-12">
+        <ExperiencesSlider cards={cards} />
+
+        {/* <div className="lg:grid hidden md:grid-cols-3 gap-5 mt-12">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -54,9 +56,9 @@ const Experience = ({ title, subTitle, cards, link }: ExperienceProps) => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
-        <div className="lg:hidden block mt-12">
+        {/* <div className="lg:hidden block mt-12">
           <SwiperCarousel
             data={cards}
             className="w-full h-full"
@@ -78,7 +80,7 @@ const Experience = ({ title, subTitle, cards, link }: ExperienceProps) => {
               </div>
             )}
           />
-        </div>
+        </div> */}
 
         <div className="flex justify-center mt-6">
           <LinkButton href={link.href} label={link.label} />

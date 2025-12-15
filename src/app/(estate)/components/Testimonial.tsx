@@ -4,8 +4,7 @@ import { Section } from "@/components";
 import LinkButton from "@/components/buttons/LinkButton";
 import SwiperCarousel from "@/components/Sliders/SwiperCarousel";
 import Image from "next/image";
-import React from "react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 type Testimonial = {
   title: string;
@@ -33,7 +32,10 @@ const Testimonial = ({ title, subTitle, cards, images, link }: Testimonial) => {
           <SwiperCarousel
             data={images}
             navigation={isNavigation}
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
+            autoplay={{
+              delay: 3000,
+            }}
             renderSlide={(img) => {
               return (
                 <div className="relative aspect-[4/3]">
@@ -49,7 +51,12 @@ const Testimonial = ({ title, subTitle, cards, images, link }: Testimonial) => {
           />
 
           <div className="absolute bottom-6 w-full flex justify-center z-50">
-            <LinkButton label={link.label} href={link.href} />
+            <LinkButton
+              label={link.label}
+              href={link.href}
+              download
+              icon={false}
+            />
           </div>
         </div>
 

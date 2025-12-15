@@ -22,7 +22,7 @@ export const pageData = {
 
     link: {
       label: "Book Now",
-      href: `tel:${contact.phone[0]}`,
+      href: `${contact.bookingCta}`,
     },
   },
   aboutData: {
@@ -36,7 +36,7 @@ export const pageData = {
     },
     link: {
       label: "Book Now",
-      href: `tel:${contact.phone[0]}`,
+      href: `${contact.bookingCta}`,
     },
   },
   onlinePlatforms: {
@@ -76,17 +76,97 @@ export const pageData = {
       "Nestled along the water’s edge, Moets Waterfront Estate combines modern elegance with natural beauty, offering spacious living areas, stylish interiors, and top-notch amenities. The property is designed to provide guests with a tranquil retreat, featuring expansive outdoor spaces and a fully equipped kitchen for a seamless stay. With its stunning location and attention to detail, Moets Waterfront Estate Raison ensures a memorable experience for anyone seeking comfort and sophistication in a peaceful waterfront setting.",
     images: [
       {
-        src: "/images/Room1.jpg",
-        alt: "Abstract futuristic web development illustration",
+        src: "/images/Rooms/Room1.jpeg",
+        alt: "Room-Image",
       },
-      // {
-      //   src: "/images/AboutImage.jpg",
-      //   alt: "Abstract futuristic web development illustration",
-      // },
+      {
+        src: "/images/Rooms/Room2.jpg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room3.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room4.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room5.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room6.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room7.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room8.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room9.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room10.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room11.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room12.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room13.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room14.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room15.jpg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room16.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room17.jpg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room18.jpg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room19.jpg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room20.jpg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room21.jpeg",
+        alt: "Room-Image",
+      },
+      {
+        src: "/images/Rooms/Room22.jpg",
+        alt: "Room-Image",
+      },
     ],
     link: {
       label: "Book Now",
-      href: `tel:${contact.phone[0]}`,
+      href: `${contact.bookingCta}`,
     },
   },
   experienceData: {
@@ -94,30 +174,84 @@ export const pageData = {
     subTitle: "Moets Waterfront Estate",
     cards: [
       {
-        title: "ATV RIDING",
-        image: {
-          src: "/images/Experience1.jpg",
-          alt: "ATV RIDING",
-        },
+        images: [
+          {
+            title: "ATV RIDING",
+            image: {
+              src: "/images/Experience1.png",
+              alt: "ATV RIDING",
+            },
+          },
+          {
+            title: "PARAGLIDING",
+            image: {
+              src: "/images/Experience4.png",
+              alt: "PARAGLIDING",
+            },
+          },
+          {
+            title: "FOOSBALL",
+            image: {
+              src: "/images/Experience7.png",
+              alt: "FOOSBALL",
+            },
+          },
+        ],
       },
       {
-        title: "BONFIRE",
-        image: {
-          src: "/images/Experience2.jpg",
-          alt: "BONFIRE",
-        },
+        images: [
+          {
+            title: "BONFIRE",
+            image: {
+              src: "/images/Experience2.png",
+              alt: "BONFIRE",
+            },
+          },
+          {
+            title: "YOGA BY THE RIVER SIDE",
+            image: {
+              src: "/images/Experience5.png",
+              alt: "YOGA BY THE RIVER SIDE",
+            },
+          },
+          {
+            title: "3 CARD POKER",
+            image: {
+              src: "/images/Experience8.png",
+              alt: "3 CARD POKER",
+            },
+          },
+        ],
       },
       {
-        title: "KARAOKE UNDER THE STARS",
-        image: {
-          src: "/images/Experience3.jpg",
-          alt: "KARAOKE UNDER THE STARS",
-        },
+        images: [
+          {
+            title: "KARAOKE UNDER THE STARS",
+            image: {
+              src: "/images/Experience3.png",
+              alt: "KARAOKE UNDER THE STARS",
+            },
+          },
+          {
+            title: "PLAY TURN BALL",
+            image: {
+              src: "/images/Experience6.png",
+              alt: "PLAY TURN BALL",
+            },
+          },
+          {
+            title: "BASEBALL",
+            image: {
+              src: "/images/Experience9.png",
+              alt: "BASEBALL",
+            },
+          },
+        ],
       },
     ],
     link: {
       label: "Book Now",
-      href: `tel:${contact.phone[0]}`,
+      href: `${contact.bookingCta}`,
     },
   },
   testimonialData: {
@@ -149,14 +283,42 @@ export const pageData = {
 
     images: [
       {
-        src: "/images/AboutImage.jpg",
-        alt: "Abstract futuristic web development illustration",
+        src: "/images/Testimonials/Testimonial1.jpg",
+        alt: "Testimonial-Image",
+      },
+      {
+        src: "/images/Testimonials/Testimonial2.jpeg",
+        alt: "Testimonial-Image",
+      },
+      {
+        src: "/images/Testimonials/Testimonial3.jpg",
+        alt: "Testimonial-Image",
+      },
+      {
+        src: "/images/Testimonials/Testimonial4.jpg",
+        alt: "Testimonial-Image",
+      },
+      {
+        src: "/images/Testimonials/Testimonial5.jpeg",
+        alt: "Testimonial-Image",
+      },
+      {
+        src: "/images/Testimonials/Testimonial6.jpeg",
+        alt: "Testimonial-Image",
+      },
+      {
+        src: "/images/Testimonials/Testimonial7.jpg",
+        alt: "Testimonial-Image",
+      },
+      {
+        src: "/images/Testimonials/Testimonial8.jpg",
+        alt: "Testimonial-Image",
       },
     ],
 
     link: {
-      label: "Book Now",
-      href: `tel:${contact.phone[0]}`,
+      label: "Download Food Menu",
+      href: `/pdf/Waterfront.pdf`,
     },
   },
 };
