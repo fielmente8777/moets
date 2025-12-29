@@ -25,6 +25,7 @@ export const pageData = {
       href: `${contact.bookingCta}`,
     },
   },
+
   aboutData: {
     title: "ABOUT US",
     subtitle: "Moets Waterfront Estate",
@@ -39,6 +40,7 @@ export const pageData = {
       href: `${contact.bookingCta}`,
     },
   },
+
   onlinePlatforms: {
     title: "HIGHEST RATINGS ON ONLINE PLATFORMS",
     cards: [
@@ -132,35 +134,35 @@ export const pageData = {
         alt: "Room-Image",
       },
       {
-        src: "/images/Rooms/Room15.jpg",
+        src: "/images/Rooms/Room15.JPG",
         alt: "Room-Image",
       },
       {
-        src: "/images/Rooms/Room16.jpeg",
+        src: "/images/Rooms/Room16.JPEG",
         alt: "Room-Image",
       },
       {
-        src: "/images/Rooms/Room17.jpg",
+        src: "/images/Rooms/Room17.JPG",
         alt: "Room-Image",
       },
       {
-        src: "/images/Rooms/Room18.jpg",
+        src: "/images/Rooms/Room18.JPG",
         alt: "Room-Image",
       },
       {
-        src: "/images/Rooms/Room19.jpg",
+        src: "/images/Rooms/Room19.JPG",
         alt: "Room-Image",
       },
       {
-        src: "/images/Rooms/Room20.jpg",
+        src: "/images/Rooms/Room20.JPG",
         alt: "Room-Image",
       },
       {
-        src: "/images/Rooms/Room21.jpeg",
+        src: "/images/Rooms/Room21.JPEG",
         alt: "Room-Image",
       },
       {
-        src: "/images/Rooms/Room22.jpg",
+        src: "/images/Rooms/Room22.JPG",
         alt: "Room-Image",
       },
     ],
